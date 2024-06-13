@@ -11,11 +11,12 @@ import image4 from "../assets/reactlogo.png";
 
 const Carousel = () => {
 	return (
-		<div className="w-full bg-[#E2E8FF] cursor-pointer">
+		<div className="w-full bg-[#E2E8FF] h-full cursor-pointer">
+			<div className="container flex items-center lg:px-20">
 			<Swiper
 				modules={[Pagination]}
-				spaceBetween={200}
-				slidesPerView={2}
+				spaceBetween={100}
+				slidesPerView={3}
 				centeredSlides={false}
 				pagination={{ clickable: true }}
 				className="pb-10"
@@ -44,6 +45,7 @@ const Carousel = () => {
 					</div>
 				</SwiperSlide>
 			</Swiper>
+			</div>
 		</div>
 	);
 };

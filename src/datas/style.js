@@ -37,5 +37,5 @@ export const dashboard = {
 };
 
 export const carousel = {
-	card:"flex items-center justify-center h-full my-20"
+	card:"flex items-center justify-center h-full my-20 size-52"
 }
