@@ -1,4 +1,4 @@
-import { container } from "../datas/style";
+import { container } from "../css/style";
 
 export default function Hero() {
 	return (

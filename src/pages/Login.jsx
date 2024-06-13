@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Image from "../assets/contoh.jpg";
-import { container, form } from "../datas/style";
+import { container, form } from "../css/style";
 import { FaFacebook, FaInstagram, FaTwitter, FaGoogle } from "react-icons/fa";
 
 export default function Login() {

@@ -2,7 +2,7 @@ import Logo from "../assets/reactlogo.png";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
-import { nav } from "../datas/style";
+import { nav } from "../css/style";
 
 export default function Nav() {
 	const [isClick, setIsClick] = useState(false);

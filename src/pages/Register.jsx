@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "../assets/contoh.jpg";
-import { container, form } from "../datas/style";
+import { container, form } from "../css/style";
 import { FaFacebook, FaInstagram, FaTwitter, FaGoogle } from "react-icons/fa";
 
 export default function Register() {
@@ -97,7 +97,7 @@ export default function Register() {
 						</label>
 
 						{/* BIRTHDAY */}
-						<label htmlFor="birthdayField"  className="grid order-4 md:order-2">
+						<label htmlFor="birthdayField" className="grid order-4 md:order-2">
 							<input
 								className={`${form.input} text-transparent focus:text-black`}
 								placeholder=""
@@ -125,9 +125,7 @@ export default function Register() {
 								name="genderField"
 								type="text"
 							/>
-							<h2
-								className={`font-bold text-md ${!genderField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}
-							>
+							<h2 className={`font-bold text-md ${!genderField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}>
 								Gender
 							</h2>
 						</label>
@@ -142,9 +140,7 @@ export default function Register() {
 								name="emailField"
 								type="email"
 							/>
-							<h2
-								className={`font-bold text-md ${!emailField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}
-							>
+							<h2 className={`font-bold text-md ${!emailField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}>
 								Email
 							</h2>
 						</label>

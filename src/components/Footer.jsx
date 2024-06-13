@@ -1,4 +1,4 @@
-import { container,footer } from "../datas/style";
+import { footer } from "../css/style";
 
 export default function Footer() {
 	return (

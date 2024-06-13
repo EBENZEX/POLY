@@ -8,9 +8,8 @@ export default function Sidebar({ children }) {
 	return (
 		<>
 			<aside className="h-screen z-10 ">
-				<nav className="h-full flex flex-col bg-gradient-to-b from-[#836FFF] py-5 to-[#4F4399] border-r shadow-sm">
+				<nav className="h-full flex flex-col bg-gradient-to-b from-[#836FFF] pb-5 to-[#4F4399] border-r shadow-sm">
 					<div className="p-4 pb-2 flex justify-between items-center">
-						{/* <img src={logo} className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} /> */}
 						<svg
 							className={`overflow-hidden transition-all ${expanded ? "w-24 h-12" : "size-0"}`}
 							viewBox="0 0 85 53"

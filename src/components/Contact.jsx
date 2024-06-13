@@ -1,4 +1,4 @@
-import { container,font } from "../datas/style";
+import { container, font } from "../css/style";
 import image from "../assets/reactlogo.png";
 
 export default function Contact() {

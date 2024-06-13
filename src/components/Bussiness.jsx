@@ -1,4 +1,4 @@
-import { container,bussiness } from "../datas/style";
+import { container, bussiness } from "../css/style";
 
 import Logo from "../assets/reactlogo.png";
 

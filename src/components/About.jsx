@@ -1,4 +1,4 @@
-import {container,font} from '../datas/style'
+import {container,font} from '../css/style'
 
 export default function About() {
 	return (
