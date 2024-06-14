@@ -1,10 +1,10 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Bussiness from "../components/Bussiness";
-import Contact from "../components/Contact";
-import Carousel from "../components/Carousel";
+import Hero from "../components/landingpage/Hero";
+import About from "../components/landingpage/About";
+import Bussiness from "../components/landingpage/Bussiness";
+import Contact from "../components/landingpage/Contact";
+import Carousel from "../components/landingpage/Carousel";
 
 export default function Home() {
 	const location = useLocation();

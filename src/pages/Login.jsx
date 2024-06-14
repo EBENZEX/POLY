@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Image from "../assets/contoh.jpg";
+import Image from "../images/user/user-01.png";
 import { container, form } from "../css/style";
 import { FaFacebook, FaInstagram, FaTwitter, FaGoogle } from "react-icons/fa";
 
