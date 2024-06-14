@@ -1,5 +1,5 @@
 import heroImage from "../images/dashboard/dashboardHero.png";
-import { LayoutDashboard, Home, StickyNote, Layers, Flag, Calendar, LifeBuoy, Settings } from "lucide-react";
+import { Home,Wallet, HandCoins, Bell,LogOut, CircleHelp } from "lucide-react";
 import Sidebar, { SidebarItem } from "../components/dashboard/Sidebar";
 import Header from "../components/dashboard/DashboardHeader";
 import Profile from "../components/dashboard/DashboardProfile";
@@ -14,29 +14,18 @@ export default function Dashboard() {
 			{/* SIDE NAVBAR */}
 			<div className="flex">
 				<Sidebar>
-					<SidebarItem icon={<Home color="#fff" size={20} />} text="Home" alert />
-					<SidebarItem icon={<LayoutDashboard color="#fff" size={20} />} text="Dashboard" active />
-					<SidebarItem icon={<StickyNote color="#fff" size={20} />} text="Projects" alert />
-					<SidebarItem icon={<Calendar color="#fff" size={20} />} text="Calendar" />
-					<SidebarItem icon={<Layers color="#fff" size={20} />} text="Tasks" />
-					<SidebarItem icon={<Flag color="#fff" size={20} />} text="Reporting" />
+					<SidebarItem icon={<Home color="#fff" size={20} />} text="Home" />
+					<SidebarItem icon={<Wallet color="#fff" size={20} />} text="Wallet" />
+					<SidebarItem icon={<HandCoins color="#fff" size={20} />} text="Trade" />
 					<hr className="my-3" />
-					<SidebarItem icon={<Settings color="#fff" size={20} />} text="Settings" />
-					<SidebarItem icon={<LifeBuoy color="#fff" size={20} />} text="Help" />
+					<SidebarItem icon={<Bell color="#fff" size={20} />} text="Notification" />
+					<SidebarItem icon={<CircleHelp color="#fff" size={20} />} text="Help" />
+					<SidebarItem icon={<LogOut color="#fff" size={20} />} text="Logout" />
 				</Sidebar>
 			</div>
 
 			<div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
 				<Header />
-
-				<main className="hidden">
-					<div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
-						{/* Cards */}
-						<div className="grid grid-cols-12 gap-6">
-							<DashboardChart />
-						</div>
-					</div>
-				</main>
 
 				<main className="w-full h-full grid gap-4">
 					{/* BG COVER */}

@@ -16,32 +16,60 @@ const Carousel = () => {
 				<Swiper
 					modules={[Pagination]}
 					spaceBetween={100}
-					slidesPerView={3}
+					slidesPerView={`auto`}
 					centeredSlides={false}
 					pagination={{ clickable: true }}
 					className="pb-10"
 				>
 					<SwiperSlide>
-						<div className={carousel.card}>
+						<div
+							className={`${carousel.card} rounded-xl flex items-center gap-2 p-4 bg-gradient-to-r from-[#35A29F] to-[#0B666A]`}
+						>
+							<div className="grid text-white">
+								<h1>Tidak</h1>
+								<h1>menghabiskan</h1>
+								<h1>banyak waktu</h1>
+							</div>
 							<img src={image1} alt="" />
 						</div>
 					</SwiperSlide>
 
 					<SwiperSlide>
-						<div className={carousel.card}>
-							<img src={image2} alt="" />
+						<div
+							className={`${carousel.card} rounded-xl flex items-center gap-2 p-4 bg-gradient-to-r from-[#35A29F] to-[#0B666A]`}
+						>
+							<div className="grid text-white">
+								<h1>Tidak</h1>
+								<h1>menghabiskan</h1>
+								<h1>banyak waktu</h1>
+							</div>
+							<img src={image1} alt="" />
 						</div>
 					</SwiperSlide>
 
 					<SwiperSlide>
-						<div className={carousel.card}>
-							<img src={image3} alt="" />
+						<div
+							className={`${carousel.card} rounded-xl flex items-center gap-2 p-4 bg-gradient-to-r from-[#35A29F] to-[#0B666A]`}
+						>
+							<div className="grid text-white">
+								<h1>Tidak</h1>
+								<h1>menghabiskan</h1>
+								<h1>banyak waktu</h1>
+							</div>
+							<img src={image1} alt="" />
 						</div>
 					</SwiperSlide>
 
 					<SwiperSlide>
-						<div className={carousel.card}>
-							<img src={image4} alt="" />
+						<div
+							className={`${carousel.card} rounded-xl flex items-center gap-2 p-4 bg-gradient-to-r from-[#35A29F] to-[#0B666A]`}
+						>
+							<div className="grid text-white">
+								<h1>Tidak</h1>
+								<h1>menghabiskan</h1>
+								<h1>banyak waktu</h1>
+							</div>
+							<img src={image1} alt="" />
 						</div>
 					</SwiperSlide>
 				</Swiper>

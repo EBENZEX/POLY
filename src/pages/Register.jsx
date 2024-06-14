@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from "../images/user/user-01.png";
+import Image from "../images/landingpage/register2.png";
 import { container, form } from "../css/style";
 import { FaFacebook, FaInstagram, FaTwitter, FaGoogle } from "react-icons/fa";
 
@@ -36,17 +36,17 @@ export default function Register() {
 	}
 	return (
 		<section className={`${container.fluid} min-h-screen`}>
-			<div className={`${container.box1}  md:grid-cols-2`}>
+			<div className={`grid lg:grid-cols-2`}>
 				{/* IMG */}
-				<div className="h-[85vh] md:h-fit">
+				<div className="h-[85vh] md:h-fit order-2 md:order-1">
 					<img src={Image} className="w-full h-full" alt="" />
 				</div>
 
 				{/* SIGN UP */}
-				<div className={`${form.box} rounded-b-xl md:rounded-r-xl md:rounded-bl-none`}>
-					<h1 className="text-center font-bold text-4xl mb-5">Sign Up</h1>
+				<div className={`${form.box} order-1 md:order-2 rounded-t-xl md:rounded-r-xl md:rounded-bl-none`}>
+					<h1 className="text-center text-gray-700 font-bold text-4xl mb-5">Sign Up</h1>
 
-					<div className="grid md:grid-cols-2 gap-5 -ml-6">
+					<div className="grid lg:grid-cols-2 gap-8 -ml-6 text-gray-500">
 						{/* USERNAME */}
 						<label htmlFor="username" className="grid order-1 md:order-1">
 							<input
@@ -145,7 +145,7 @@ export default function Register() {
 							</h2>
 						</label>
 					</div>
-					<button className={form.btn}>Register</button>
+					<button className={`${form.btn} text-gray-700`}>Register</button>
 
 					<span className="text-center">Or Try Login In Another Way</span>
 					<div className="flex justify-center items-center gap-5 -mt-5">

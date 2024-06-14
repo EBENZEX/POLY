@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Image from "../images/user/user-01.png";
+import Image from "../images/landingpage/login2.png";
 import { container, form } from "../css/style";
 import { FaFacebook, FaInstagram, FaTwitter, FaGoogle } from "react-icons/fa";
 
@@ -15,12 +15,12 @@ export default function Login() {
 	const [btn, setBtn] = useState(false);
 	const render = {
 		true: (
-			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl absolute top-12 left-[50vw]">
+			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl fixed top-12 left-[50vw]">
 				<h1 className="font-bold text-red-500 text-xl">Semua Field Harus Diisi</h1>
 			</div>
 		),
 		false: (
-			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl absolute top-12 left-[50vw]">
+			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl fixed top-12 left-[50vw]">
 				<h1 className="font-bold text-green-500 text-xl">Login Berhasil</h1>
 			</div>
 		),
@@ -58,20 +58,16 @@ export default function Login() {
 	useEffect(() => {
 		if (btn && isValid) {
 			const timer = setTimeout(() => {
-				navigate("/dashboard");
+				navigate("/profile");
 			}, 1500);
 
-			// Clear the timeout if the component unmounts
 			return () => clearTimeout(timer);
 		}
 	}, [btn, isValid, navigate]);
 
 	return (
-		<section className={`${container.fluid} min-h-screen`}>
-			{/* POP OUT */}
-			{/* <div className={`${btnClick ? "" : "visible"}`}></div> */}
-
-			<div className={`${container.box1}  md:grid-cols-2`}>
+		<section className={`${container.fluid} px-0 min-h-screen`}>
+			<div className={`${container.box1} px-0 w-[90vw] grid md:grid-cols-2`}>
 				{/* SIGN IN */}
 				<div
 					className={`${form.box} h-[80vh] rounded-b-xl md:rounded-br-none md:rounded-l-xl  lg:h-fit order-2 md:order-1`}
@@ -132,10 +128,11 @@ export default function Login() {
 				</div>
 
 				{/* IMG */}
-				<div className="h-screen md:h-fit order-1 md:order-2">
-					<img src={Image} className="w-full h-full" alt="" />
+				<div className={`order-2 flex md:order-1`}>
+					<img src={Image} alt="" />
 				</div>
 			</div>
+			{/* POP OUT */}
 			{showMessage && (isValid ? render.true : render.false)}
 		</section>
 	);

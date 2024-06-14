@@ -1,6 +1,7 @@
-import { container, bussiness } from "../../css/style";
-
-import Logo from "../../images/user/user-01.png";
+import { container, bussiness } from "../../css/style";Image
+import Image1 from "../../images/landingpage/card5.png";
+import Image2 from "../../images/landingpage/card6.png";
+import Image3 from "../../images/landingpage/card7.png";
 
 export default function Bussiness() {
 	return (
@@ -10,17 +11,17 @@ export default function Bussiness() {
 
 				<div className={`${bussiness.cardContainer}`}>
 					<div className={bussiness.card}>
-						<img src={Logo} width={150} alt="" />
+						<img src={Image1} width={200} alt="" />
 						<span>Tukar Sampah Menjadi Uang</span>
 					</div>
 
 					<div className={bussiness.card}>
-						<img src={Logo} width={150} alt="" />
+						<img src={Image2} width={180} alt="" />
 						<span>Rekening Saldo Setiap Pelanggan</span>
 					</div>
 
 					<div className={bussiness.card}>
-						<img src={Logo} width={150} alt="" />
+						<img src={Image3} width={200} alt="" />
 						<span>Tersedia Bagi Semua</span>
 					</div>
 				</div>

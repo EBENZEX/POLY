@@ -44,7 +44,7 @@ export default function Nav() {
 				</div>
 
 				{/* MD KEBAWAH */}
-				<div className="md:hidden rounded-sm" onClick={handleIsClick}>
+				<div className="md:hidden cursor-pointer hover:border border-slate-700 p-2 rounded-xl" onClick={handleIsClick}>
 					{isClick ? <FiX className="size-6" /> : <FiMenu className="size-6" />}
 				</div>
 			</div>
