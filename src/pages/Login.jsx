@@ -12,23 +12,19 @@ export default function Login() {
 	const [passwordField, setPasswordField] = useState(true);
 	const [user, setUser] = useState("POLY_ADMIN");
 	const [password, setPassword] = useState("PASSWORD123");
-	const [btn, setBtn] = useState(false);
-	const render = {
-		false: (
-			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl fixed top-20 left-1/2 transform -translate-x-1/2 translate-y-0 transition-transform duration-300 ease-out">
-				<h1 className="font-bold text-red-500 text-xl">Semua Field Harus Diisi</h1>
+
+	const renderMessage = (isValid) => {
+		const message = isValid ? "Login Berhasil" : "Semua Field Harus Diisi";
+		const color = isValid ? "text-green-500" : "text-red-500 animate-pulse";
+		return (
+			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl fixed top-10 left-1/2 transform -translate-x-1/2 transition-transform duration-300 ease-out">
+				<h1 className={`font-bold text-xl ${color}`}>{message}</h1>
 			</div>
-		),
-		true: (
-			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl fixed top-20 left-1/2 transform -translate-x-1/2 translate-y-0 transition-transform duration-300 ease-out">
-				<h1 className="font-bold text-green-500 text-xl">Login Berhasil</h1>
-			</div>
-		),
+		);
 	};
 
 	function handleUser(event) {
 		setUser(event.target.value);
-		console.log(user);
 	}
 
 	function handlePassword(event) {
@@ -47,39 +43,37 @@ export default function Login() {
 		if (user && password) {
 			setIsValid(true);
 			setShowMessage(true);
-			setBtn(true);
 		} else {
 			setIsValid(false);
 			setShowMessage(true);
-			setBtn(false);
 		}
 	}
 
 	useEffect(() => {
-		if (btn && isValid) {
+		if (showMessage && isValid) {
 			const timer = setTimeout(() => {
 				navigate("/dashboard-profile");
 			}, 1500);
 
 			return () => clearTimeout(timer);
 		}
-	}, [btn, isValid, navigate]);
+	}, [showMessage, isValid, navigate]);
 
 	return (
 		<section className={`${container.fluid} px-0 min-h-screen`}>
-			<div className={`${container.box1} px-0 w-[90vw] grid md:grid-cols-2`}>
+			<div className={`${container.box1} px-0 grid md:grid-cols-5 lg:grid-cols-2`}>
 				<div
-					className={`${form.box} h-[80vh] rounded-b-xl md:rounded-br-none md:rounded-l-xl  lg:h-fit order-2 md:order-1`}
+					className={`${form.box} md:col-span-3 lg:col-span-1 h-[80vh] rounded-t-xl md:rounded-br-none md:rounded-l-xl lg:h-fit order-2 md:order-1`}
 				>
 					<h1 className="text-center font-bold text-4xl mb-8">Sign In</h1>
 
-					<label htmlFor="username" className="grid ">
+					<label htmlFor="username" className="grid">
 						<input
 							className={form.input}
-							onFocus={(event) => handleOpenUser(event.target.value)}
-							onBlur={(event) => handleOpenUser(event.target.value)}
-							onChange={(event) => handleUser(event.target.value)}
-							defaultValue={user}
+							onFocus={(event)=>handleOpenUser(event.target.value)}
+							onBlur={(event)=>handleOpenUser(event.target.value)}
+							onChange={handleUser}
+							value={user}
 							id="username"
 							name="username"
 							type="text"
@@ -89,15 +83,15 @@ export default function Login() {
 						</h2>
 					</label>
 
-					<label htmlFor="passwordField" className="grid">
+					<label htmlFor="password" className="grid">
 						<input
 							className={form.input}
-							onFocus={(event) => handleOpenPassword(event.target.value)}
-							onBlur={(event) => handleOpenPassword(event.target.value)}
-							onChange={(event) => handlePassword(event.target.value)}
+							onFocus={(event)=>handleOpenPassword(event.target.value)}
+							onBlur={(event)=>handleOpenPassword(event.target.value)}
+							onChange={handlePassword}
 							value={password}
-							id="passwordField"
-							name="passwordField"
+							id="password"
+							name="password"
 							type="password"
 						/>
 						<h2 className={`font-bold text-md ${!passwordField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}>
@@ -111,28 +105,26 @@ export default function Login() {
 
 					<span className="text-center">Or Try Login In Another Way</span>
 					<div className="flex justify-center items-center gap-5 -mt-5">
-						<a target="_blank" href="https://facebook.com">
+						<a target="_blank" href="https://facebook.com" rel="noopener noreferrer">
 							<FaFacebook className="size-6 hover:text-blue-600" />
 						</a>
-						<a target="_blank" href="https://instagram.com">
+						<a target="_blank" href="https://instagram.com" rel="noopener noreferrer">
 							<FaInstagram className="size-6 hover:text-red-600" />
 						</a>
-						<a target="_blank" href="https://twitter.com">
+						<a target="_blank" href="https://twitter.com" rel="noopener noreferrer">
 							<FaTwitter className="size-6 hover:text-blue-600" />
 						</a>
-						<a target="_blank" href="https://google.com">
+						<a target="_blank" href="https://google.com" rel="noopener noreferrer">
 							<FaGoogle className="size-6 hover:text-red-600" />
 						</a>
 					</div>
 				</div>
 
-				{/* IMG */}
-				<div className={`order-2 flex md:order-1`}>
-					<img src={Image} alt="" />
+				<div className={`order-2 md:col-span-2 lg:col-span-1 flex md:order-1`}>
+					<img src={Image} alt="Login" />
 				</div>
 			</div>
-			{/* POP OUT */}
-			{showMessage && render[isValid]}
+			{showMessage && renderMessage(isValid)}
 		</section>
 	);
 }

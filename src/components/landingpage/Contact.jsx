@@ -14,7 +14,7 @@ export default function Contact() {
 						<span>Email : mikroskil@gmail.com</span>
 					</div>
 
-					<img src={image} className="h-[10rem] w-[12rem] lg:h-[20rem] lg:w-[28rem] -translate-x-[5rem] lg:-translate-x-[12rem]" alt="" />
+					<img src={image} className="h-[14rem] w-[16rem] lg:h-[20rem] lg:w-[28rem] -translate-x-[5rem] lg:-translate-x-[12rem]" alt="" />
 				</div>
 			</div>
 		</div>

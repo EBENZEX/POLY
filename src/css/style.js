@@ -62,8 +62,8 @@ export const bussiness = {
 };
 
 export const form = {
-	input: "pl-2 transition-transform bg-inherit duration-100 ease-in-out border-b-2 border-slate-400 text-slate-600 font-bold border-slate-600 focus:outline-none w-11/12",
-	box: "flex flex-col justify-center gap-10 bg-[#E2E8FF] py-10 px-20 md:h-fit",
+	input: "pl-2 transition-transform bg-inherit duration-100 ease-in-out border-b-2 border-slate-400 text-slate-600 font-bold border-slate-600 focus:outline-none",
+	box: "flex flex-col justify-center gap-10 bg-[#E2E8FF] p-10 md:h-fit",
 	btn: "text-xl rounded-2xl font-bold py-2 bg-[#15F5BA] hover:bg-[#13c293]",
 };
 
@@ -80,5 +80,6 @@ export const dashboard = {
 
 export const carousel = {
 	card:"flex items-center justify-center h-full my-20 w-[25rem] rounded-xl p-4",
-	box1:"grid text-white text-2xl ml-16 lg:ml-2 font-bold"
+	box1:"grid text-white text-2xl ml-16 lg:ml-2 font-bold",
+	box2:"grid text-white text-2xl lg:ml-2 font-bold"
 }

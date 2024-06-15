@@ -3,14 +3,30 @@ import Login from "./Login";
 import Home from "../components/landingpage/Home";
 import Register from "./Register";
 import Footer from "../components/landingpage/Footer";
+import PageTitle from "../components/PageTitle";
 
 export default function LandingPage() {
 	return (
 		<div>
 			<Nav />
-			{location.pathname === "/" && <Home />}
-			{location.pathname === "/login" && <Login />}
-			{location.pathname === "/register" && <Register />}
+			{location.pathname === "/" && (
+				<>
+					<PageTitle title={"POLY | Landing Page"} />
+					<Home />
+				</>
+			)}
+			{location.pathname === "/login" && (
+				<>
+					<PageTitle title={"POLY | Login"} />
+					<Login />
+				</>
+			)}
+			{location.pathname === "/register" && (
+				<>
+					<PageTitle title={"POLY | Register"} />
+					<Register />
+				</>
+			)}
 			<Footer />
 		</div>
 	);

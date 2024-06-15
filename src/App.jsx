@@ -16,7 +16,7 @@ const App = () => {
 
 		return () => clearTimeout(timeoutId);
 	}, [location.pathname]);
-	
+
 	return isLoading ? (
 		<div className="loading-container w-screen h-screen flex justify-center items-center">
 			<Loader type="ThreeDots" color="#836FFF" height={80} width={80} />

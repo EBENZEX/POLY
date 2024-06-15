@@ -1,9 +1,9 @@
 import heroImage from "../../images/dashboard/dashboardHero.png";
-import Profile from "./DashboardProfile";
-import DashboardChart from "./DashboardChart";
-import Income from "./DashboardIncome";
-import Balance from "./DashboardBalance"; 
-import Activity from "./DashboardActivity";
+import CardProfile from "./CardProfile";
+import CardChart from "./CardChart";
+import CardIncome from "./CardIncome";
+import CardBalance from "./CardBalance"; 
+import CardActivity from "./CardActivity";
 
 export default function DashboardProfile() {
 	return (
@@ -14,27 +14,27 @@ export default function DashboardProfile() {
 			</div>
 
 			{/* BOX */}
-			<div className="hidden lg:grid grid-cols-7 gap-3 pr-4">
-				<Profile />
-				<div className="col-span-5 grid grid-cols-3 gap-4">
-					<Balance />
-					<Income bg="#C4FFAF" header="Income" text="+Rp 50,000" />
-					<Income bg="#FF7878" header="Outcome" text="-Rp 50,000" />
-					<DashboardChart />
-					<Activity />
+			<div className="hidden lg:grid grid-cols-12 gap-3 pr-2">
+				<CardProfile />
+				<div className="col-span-9 grid grid-cols-3 gap-4">
+					<CardBalance />
+					<CardIncome bg="#C4FFAF" header="CardIncome" text="+Rp 50,000" />
+					<CardIncome bg="#FF7878" header="Outcome" text="-Rp 50,000" />
+					<CardChart />
+					<CardActivity />
 				</div>
 			</div>
 
 			{/* box 2 */}
-			<div className="lg:hidden flex flex-col gap-6 pl-10 pr-28 w-screen">
-				<div className="grid w-full md:grid-cols-12 mt-10 lg:mt-0 gap-4">
-					<Profile />
-					<Balance />
-					<Income bg="#C4FFAF" header="Income" text="+Rp 50,000" />
-					<Income bg='#FF7878' header="Outcome" text="-Rp 50,000" />
+			<div className="lg:hidden flex flex-col flex-1 gap-6  pl-4 pr-24 w-screen">
+				<div className="grid md:grid-cols-12 mt-10 lg:mt-0 gap-4">
+					<CardProfile />
+					<CardBalance />
+					<CardIncome bg="#C4FFAF" header="CardIncome" text="+Rp 50,000" />
+					<CardIncome bg='#FF7878' header="Outcome" text="-Rp 50,000" />
 				</div>
-				<DashboardChart />
-				<Activity />
+				<CardChart />
+				<CardActivity />
 			</div>
 		</main>
 	);

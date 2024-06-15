@@ -167,7 +167,7 @@ export default function TrashToCash() {
 			</main>
 
 			<aside id="main-content2" className="w-full tb lg:pl-14 md:pl-14 duration-1000">
-				<div className="lg:w-[90%] md:w-[80%] sm:w-[30%] container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+				<div className="lg:w-[90%] overflow-x-scroll  md:w-[80%] sm:w-[30%] container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
 					<div className="relative shadow-md sm:rounded-lg">
 						<table className="w-full text-sm text-left rtl:text-right border text-dark-500 dark:text-dark-400">
 							<thead className="font-bold text-dark border-b">
@@ -208,7 +208,7 @@ export default function TrashToCash() {
 					</div>
 				</div>
 			</aside>
-			<div className="text-white m-[50px]">.</div>
+			<div className="text-white m-[20px]">.</div>
 		</div>
 	);
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import Image from "../images/landingpage/register2.png";
 import { container, form } from "../css/style";
@@ -35,18 +36,18 @@ export default function Register() {
 		setPasswordField(event ? true : !passwordField);
 	}
 	return (
-		<section className={`${container.fluid} min-h-screen`}>
-			<div className={`grid lg:grid-cols-2`}>
+		<section className={`${container.fluid} shadow-xl min-h-screen`}>
+			<div className={`grid lg:grid-cols-2 mt-12`}>
 				{/* IMG */}
-				<div className="h-[85vh] md:h-fit order-2 md:order-1">
+				<div className="h-[85vh] lg:translate-y-20 xl:translate-y-5 p-20 lg:p-10 md:h-fit order-2 lg:order-1">
 					<img src={Image} className="w-full h-full" alt="" />
 				</div>
 
 				{/* SIGN UP */}
-				<div className={`${form.box} order-1 md:order-2 rounded-t-xl md:rounded-r-xl md:rounded-bl-none`}>
+				<div className={`${form.box} order-1 lg:order-2 rounded-t-xl md:rounded-r-xl md:rounded-bl-none`}>
 					<h1 className="text-center text-gray-700 font-bold text-4xl mb-5">Sign Up</h1>
 
-					<div className="grid lg:grid-cols-2 gap-8 -ml-6 text-gray-500">
+					<div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-8 text-gray-500">
 						{/* USERNAME */}
 						<label htmlFor="username" className="grid order-1 md:order-1">
 							<input
@@ -82,7 +83,7 @@ export default function Register() {
 						{/* CONFIRM PASSWORD */}
 						<label htmlFor="confirmField" className="grid order-3 md:order-5">
 							<input
-								className={form.input}
+								className={`${form.input}`}
 								onFocus={(event) => handleConfirm(event.target.value)}
 								onBlur={(event) => handleConfirm(event.target.value)}
 								id="confirmField"
@@ -145,8 +146,13 @@ export default function Register() {
 							</h2>
 						</label>
 					</div>
-					<button className={`${form.btn} text-gray-700`}>Register</button>
 
+					{/* Submit BTN */}
+					<Link to={"/dashboard-home"} className={`${form.btn} text-center text-gray-700`}>
+						<button>Register</button>
+					</Link>
+
+					{/* ALT WAY LOGIN (DUMMY FITUR) */}
 					<span className="text-center">Or Try Login In Another Way</span>
 					<div className="flex justify-center items-center gap-5 -mt-5">
 						<a target="_blank" href="https://facebook.com">

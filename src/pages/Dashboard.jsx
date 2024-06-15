@@ -1,5 +1,6 @@
 import Logo from "../images/dashboard/logo.png";
 import { Home, X, HandCoins, Bell, CircleHelp, User } from "lucide-react";
+import PageTitle from "../components/PageTitle";
 import Sidebar, { SidebarItem } from "../components/dashboard/Sidebar";
 import Header from "../components/dashboard/Header";
 import DashboardHome from "../components/dashboard/Home";
@@ -26,12 +27,12 @@ export default function Dashboard() {
 					notif ? "opacity-100 z-50" : "opacity-0 -z-50"
 				} backdrop-blur-sm w-full h-full flex justify-center items-center`}
 			>
-				<div className=" mx-10 bg-white grid shadow-2xl rounded-[2rem] gap-8 w-3/4 sm:w-1/2 lg:w-1/3 h-3/4 md:h-1/2">
+				<div className=" mx-10 bg-white grid shadow-2xl rounded-[2rem] w-3/4 sm:w-1/2 lg:w-1/3 h-3/4">
 					<div className="text-white bg-[#836FFF] rounded-t-[2rem] font-bold text-xl flex justify-center items-center py-3">
 						<h1>Notification</h1>
 					</div>
 
-					<div className="flex gap-5 mx-8 mb-60 md:mb-20 justify-between items-center border-b border-black">
+					<div className="flex mt-[2rem] mb-[15rem] gap-5 mx-8 justify-between items-center border-b border-black">
 						<img src={Logo} className="w-16" alt="" />
 						<p>Selamat Datang Di POLY!. Jika anda terdapat keluhan dari masalah silahkan hubungi contact kami.</p>
 					</div>
@@ -49,7 +50,7 @@ export default function Dashboard() {
 			<div
 				className={`absolute transition-all duration-500 ease-in-out ${
 					support ? "opacity-100 z-50 " : "opacity-0 -z-50"
-				} backdrop-blur-smw-full h-full flex justify-center items-center`}
+				} backdrop-blur-sm w-full h-full flex justify-center items-center`}
 			>
 				<div className=" mx-10 bg-white grid shadow-2xl rounded-[2rem] gap-8 w-3/4 sm:w-1/2 lg:w-1/3 min-h-1/2">
 					<div className="text-white bg-[#836FFF] rounded-t-[2rem] font-bold text-xl flex justify-center items-center py-3">
@@ -88,12 +89,28 @@ export default function Dashboard() {
 				</Sidebar>
 			</div>
 
+			{/* SECTION */}
 			<div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
 				<Header />
-				<div>
-					{location.pathname === "/dashboard-home" && <DashboardHome />}
-					{location.pathname === "/dashboard-profile" && <DashboardProfile />}
-					{location.pathname === "/dashboard-cash" && <DashboardCash />}
+				<div className="bg-[#F0F3FF]">
+					{location.pathname === "/dashboard-home" && (
+						<>
+							<PageTitle title={"POLY | DASHBOARD HOME"} />
+							<DashboardHome />
+						</>
+					)}
+					{location.pathname === "/dashboard-profile" && (
+						<>
+							<PageTitle title={"POLY | Profile"} />
+							<DashboardProfile />
+						</>
+					)}
+					{location.pathname === "/dashboard-cash" && (
+						<>
+							<PageTitle title={"POLY | Trash To Cash"} />
+							<DashboardCash />
+						</>
+					)}
 				</div>
 			</div>
 		</div>
