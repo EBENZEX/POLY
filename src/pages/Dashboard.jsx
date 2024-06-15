@@ -23,10 +23,10 @@ export default function Dashboard() {
 			{/* Notification */}
 			<div
 				className={`absolute transition-all duration-500 ease-in-out ${
-					notif ? "opacity-100" : "opacity-0 -z-50"
-				} backdrop-blur-sm z-50 w-full h-full flex justify-center items-center`}
+					notif ? "opacity-100 z-50" : "opacity-0 -z-50"
+				} backdrop-blur-sm w-full h-full flex justify-center items-center`}
 			>
-				<div className=" mx-10 bg-white z-50 grid shadow-2xl rounded-[2rem] gap-8 w-3/4 sm:w-1/2 lg:w-1/3 h-3/4 md:h-1/2">
+				<div className=" mx-10 bg-white grid shadow-2xl rounded-[2rem] gap-8 w-3/4 sm:w-1/2 lg:w-1/3 h-3/4 md:h-1/2">
 					<div className="text-white bg-[#836FFF] rounded-t-[2rem] font-bold text-xl flex justify-center items-center py-3">
 						<h1>Notification</h1>
 					</div>
@@ -48,10 +48,10 @@ export default function Dashboard() {
 			{/* Support */}
 			<div
 				className={`absolute transition-all duration-500 ease-in-out ${
-					support ? "opacity-100" : "opacity-0 -z-50"
-				} backdrop-blur-sm z-50 w-full h-full flex justify-center items-center`}
+					support ? "opacity-100 z-50 " : "opacity-0 -z-50"
+				} backdrop-blur-smw-full h-full flex justify-center items-center`}
 			>
-				<div className=" mx-10 bg-white  z-50 grid shadow-2xl rounded-[2rem] gap-8 w-3/4 sm:w-1/2 lg:w-1/3 min-h-1/2">
+				<div className=" mx-10 bg-white grid shadow-2xl rounded-[2rem] gap-8 w-3/4 sm:w-1/2 lg:w-1/3 min-h-1/2">
 					<div className="text-white bg-[#836FFF] rounded-t-[2rem] font-bold text-xl flex justify-center items-center py-3">
 						<h1>Notification</h1>
 					</div>
