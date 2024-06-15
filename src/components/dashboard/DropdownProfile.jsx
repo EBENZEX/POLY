@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Transition from "./utils/Transition";
-import UserAvatar from "../../Logo.svg";
+import UserAvatar from "../../images/dashboard/logo.png";
 
 function DropdownProfile({ align }) {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -9,7 +9,6 @@ function DropdownProfile({ align }) {
 	const trigger = useRef(null);
 	const dropdown = useRef(null);
 
-	// close on click outside
 	useEffect(() => {
 		const clickHandler = ({ target }) => {
 			if (!dropdown.current) return;
@@ -38,7 +37,7 @@ function DropdownProfile({ align }) {
 				onClick={() => setDropdownOpen(!dropdownOpen)}
 				aria-expanded={dropdownOpen}
 			>
-				<img className="w-8 h-8 rounded-full" src={UserAvatar} width="32" height="32" alt="User" />
+				<img className="w-12 rounded-full" src={UserAvatar} width="32" height="32" alt="User" />
 				<div className="flex items-center truncate">
 					<span className="truncate ml-2 text-sm font-medium dark:text-slate-300 group-hover:text-slate-800 dark:group-hover:text-slate-200">
 						POLY
@@ -70,7 +69,7 @@ function DropdownProfile({ align }) {
 						<li>
 							<Link
 								className="font-medium text-sm text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center py-1 px-3"
-								to="/login"
+								to="/"
 								onClick={() => setDropdownOpen(!dropdownOpen)}
 							>
 								Sign Out

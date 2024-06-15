@@ -1,4 +1,4 @@
-import Logo from "../../images/user/user-01.png";
+import Logo from "../../images/dashboard/logo.png";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
@@ -14,7 +14,7 @@ export default function Nav() {
 		<nav className="grid bg-[#F0F3FF] shadow-lg z-10 px-8 py-4 rounded-bl-[1.5rem] rounded-br-[1.5rem]">
 			<div className="w-full flex justify-between items-center">
 				<NavLink to={"/"}>
-					<img className="size-10 hover:scale-125" src={Logo} alt="" />
+					<img className="w-16 hover:scale-125" src={Logo} alt="" />
 				</NavLink>
 
 				{/* MD KEATAS */}
@@ -44,7 +44,7 @@ export default function Nav() {
 				</div>
 
 				{/* MD KEBAWAH */}
-				<div className="md:hidden cursor-pointer hover:border border-slate-700 p-2 rounded-xl" onClick={handleIsClick}>
+				<div className="md:hidden cursor-pointer hover:scale-125 p-2 rounded-xl" onClick={handleIsClick}>
 					{isClick ? <FiX className="size-6" /> : <FiMenu className="size-6" />}
 				</div>
 			</div>

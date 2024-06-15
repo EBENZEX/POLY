@@ -53,12 +53,12 @@ export const container = {
 };
 
 export const font = {
-	heading: "text-center font-bold text-5xl",
+	heading: "text-center font-bold text-4xl md:text-5xl",
 };
 
 export const bussiness = {
 	cardContainer: "grid lg:grid-cols-3 gap-10 text-center",
-	card: "flex flex-col gap-5 text-white font-semibold text-2xl rounded-[1.5rem] bg-gradient-to-b from-[#836FFF] to-[#4F4399] py-10 px-16 justify-center items-center ",
+	card: "flex flex-col gap-5 text-white font-semibold text-xl md:text-2xl rounded-[1.5rem] bg-gradient-to-b from-[#836FFF] to-[#4F4399] py-10 px-16 justify-center items-center ",
 };
 
 export const form = {
@@ -68,8 +68,8 @@ export const form = {
 };
 
 export const footer = {
-	fluid: "text-center text-lg font-semibold -mb-20 text-white",
-	box: "bg-gradient-to-r from-[#836FFF] py-5 to-[#4F4399]",
+	fluid: "text-center text-sm md:text-md font-semibold -mb-20 text-white",
+	box: "bg-gradient-to-r from-[#836FFF] py-2 md:py-4 to-[#4F4399]",
 };
 
 export const dashboard = {
@@ -79,5 +79,6 @@ export const dashboard = {
 };
 
 export const carousel = {
-	card:"flex items-center justify-center h-full my-20 size-52"
+	card:"flex items-center justify-center h-full my-20 w-[25rem] rounded-xl p-4",
+	box1:"grid text-white text-2xl ml-16 lg:ml-2 font-bold"
 }
