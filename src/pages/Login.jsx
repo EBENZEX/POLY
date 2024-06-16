@@ -52,7 +52,7 @@ export default function Login() {
 	useEffect(() => {
 		if (showMessage && isValid) {
 			const timer = setTimeout(() => {
-				navigate("/dashboard-profile");
+				navigate("/dashboard-home");
 			}, 1500);
 
 			return () => clearTimeout(timer);
@@ -61,7 +61,8 @@ export default function Login() {
 
 	return (
 		<section className={`${container.fluid} px-0 min-h-screen`}>
-			<div className={`${container.box1} px-0 grid md:grid-cols-5 lg:grid-cols-2`}>
+			{/* <div className={`${container.box1} px-0 grid md:grid-cols-5 lg:grid-cols-2`}> */}
+			<div>
 				<div
 					className={`${form.box} md:col-span-3 lg:col-span-1 h-[80vh] rounded-t-xl md:rounded-br-none md:rounded-l-xl lg:h-fit order-2 md:order-1`}
 				>
