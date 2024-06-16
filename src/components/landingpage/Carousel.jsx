@@ -12,20 +12,21 @@ import image4 from "../../images/landingpage/card4.png";
 const Carousel = () => {
 	return (
 		<div className="w-full bg-[#E2E8FF] h-full cursor-pointer">
-			<div className="flex container mx-auto items-center ">
+			<div className="flex container mx-auto items-center justify-center"> {/* Center the Swiper container */}
 				<Swiper
 					modules={[Pagination]}
 					pagination={{ clickable: true }}
-					className="pl-12 lg:px-20 xl:px-6"
+					centeredSlides={true} // Center slides by default
+					className="pl-5 sm:pl-10 lg:px-20 xl:px-6"
 					breakpoints={{
 						0: {
 							slidesPerView: 1,
 							centeredSlides: true,
-							spaceBetween: 100,
+							spaceBetween: 150,
 						},
 						750: {
 							slidesPerView: 1.5,
-							centeredSlides: false,
+							centeredSlides: true,
 							spaceBetween: 0,
 						},
 						1080: {
@@ -52,13 +53,13 @@ const Carousel = () => {
 								<h1>menghabiskan</h1>
 								<h1>banyak waktu</h1>
 							</div>
-							<img className="h-[12rem] lg:h-[10rem] -ml-8" src={image1} alt="" />
+							<img className="h-[10rem] lg:h-[10rem] -ml-8" src={image1} alt="" />
 						</div>
 					</SwiperSlide>
 
 					<SwiperSlide>
 						<div className={`${carousel.card} bg-gradient-to-r from-[#FFC7DB] to-[#997783]`}>
-							<img className="h-[12rem] lg:h-[10rem] -ml-6" src={image2} alt="" />
+							<img className="h-[10rem] lg:h-[10rem] -ml-6" src={image2} alt="" />
 							<div className={`${carousel.box2}`}>
 								<h1>Hasilkan Uang</h1>
 								<h1>Dengan Praktis</h1>
@@ -68,7 +69,7 @@ const Carousel = () => {
 
 					<SwiperSlide>
 						<div className={`${carousel.card} bg-gradient-to-r from-[#F7FFC7] to-[#949977]`}>
-							<img className="h-[12rem] lg:h-[10rem] w-[14rem] lg:w-[10rem]" src={image3} alt="" />
+							<img className="h-[10rem] lg:h-[10rem] w-[10rem] md:w-[14rem] lg:w-[10rem]" src={image3} alt="" />
 							<div className={`${carousel.box2}`}>
 								<h1>Layanan Cepat</h1>
 								<h1>Khusus Pengguna</h1>
@@ -83,7 +84,7 @@ const Carousel = () => {
 								<h1>Dipahami Dengan</h1>
 								<h1>Cepat</h1>
 							</div>
-							<img className="h-[12rem] lg:h-[10rem]" src={image4} alt="" />
+							<img className="h-[10rem] lg:h-[10rem]" src={image4} alt="" />
 						</div>
 					</SwiperSlide>
 				</Swiper>

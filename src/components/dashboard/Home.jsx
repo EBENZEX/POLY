@@ -62,9 +62,9 @@ export default function Home() {
 				<div className="w-[90%] lg:w-full container mx-auto mt-8 lg:px-8  py-8">
 					<div className="relative shadow-md sm:rounded-lg">
 						<table className="w-full text-lg text-left rtl:text-right text-dark-500 shadow-2xl dark:text-dark-400 ">
-							<thead className="font-bold text-dark border-b">
+							<thead className="font-bold bg-white text-dark border-b">
 								<tr>
-									<th scope="col" className="px-12 py-3 text-center font-bold" colSpan="5">
+									<th scope="col" className="px-12 py-3 border-b text-center font-bold" colSpan="5">
 										Penukaran Sampah
 									</th>
 								</tr>

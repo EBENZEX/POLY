@@ -79,7 +79,7 @@ export const dashboard = {
 };
 
 export const carousel = {
-	card:"flex items-center justify-center h-full my-20 w-[25rem] rounded-xl p-4",
-	box1:"grid text-white text-2xl ml-16 lg:ml-2 font-bold",
-	box2:"grid text-white text-2xl lg:ml-2 font-bold"
+	card:"flex items-center justify-center md:h-full my-20 w-[18rem] md:w-[25rem] rounded-xl p-4",
+	box1:"grid text-white text-md md:text-2xl ml-10 lg:ml-2 font-semibold md:font-bold",
+	box2:"grid text-white text-md md:text-2xl lg:ml-2 font-semibold md:font-bold"
 }

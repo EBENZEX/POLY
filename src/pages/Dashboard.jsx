@@ -32,8 +32,8 @@ export default function Dashboard() {
 						<h1>Notification</h1>
 					</div>
 
-					<div className="flex mt-[2rem] mb-[15rem] gap-5 mx-8 justify-between items-center border-b border-black">
-						<img src={Logo} className="w-16" alt="" />
+					<div className="flex mt-[2rem] mb-[10rem] text-xs gap-5 mx-8 justify-between items-center border-b border-black">
+						<img src={Logo} className="w-8 md:w-16" alt="" />
 						<p>Selamat Datang Di POLY!. Jika anda terdapat keluhan dari masalah silahkan hubungi contact kami.</p>
 					</div>
 
@@ -57,7 +57,7 @@ export default function Dashboard() {
 						<h1>Notification</h1>
 					</div>
 
-					<div className="flex flex-col gap-3 font-bold mx-8 mb-20 justify-center items-center border-b border-black">
+					<div className="flex flex-col gap-3 text-xs font-bold mx-8 mb-20 justify-center items-center border-b border-black">
 						<img src={Logo} className="w-16" alt="" />
 						<h1>JL. M.H Thamrin No.140</h1>
 						<h1>Phone : (061) 4573767</h1>

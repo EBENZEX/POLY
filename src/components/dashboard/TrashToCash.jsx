@@ -46,16 +46,21 @@ export default function TrashToCash() {
 							<img src="img/dsb.png" alt="" className="w-auto h-auto" />
 							<span className="text-[15px] ml-4 text-gray-200 font-bold">Dashboard</span>
 						</div>
+
 						<hr className="my-2 mx-5 text-gray-600" />
+						
 						<div className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
 							<img src="img/wallet.png" alt="" className="w-auto h-auto" />
 							<span className="text-[15px] ml-4 text-gray-200 font-bold">Wallet</span>
 						</div>
+						
 						<hr className="my-2 mx-5 text-gray-600" />
+						
 						<div className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
 							<img src="img/trd.png" alt="" className="w-auto h-auto" />
 							<span className="text-[15px] ml-4 text-gray-200 font-bold">Trash To Cash</span>
 						</div>
+						
 						<hr className="my-2 mx-5 text-gray-600" />
 					</div>
 				</div>
@@ -167,12 +172,12 @@ export default function TrashToCash() {
 			</main>
 
 			<aside id="main-content2" className="w-full tb lg:pl-14 md:pl-14 duration-1000">
-				<div className="lg:w-[90%] overflow-x-scroll  md:w-[80%] sm:w-[30%] container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+				<div className="overflow-x-scroll container mx-auto mt-8 px-4 sm:px-6">
 					<div className="relative shadow-md sm:rounded-lg">
 						<table className="w-full text-sm text-left rtl:text-right border text-dark-500 dark:text-dark-400">
-							<thead className="font-bold text-dark border-b">
+							<thead className="font-bold bg-white text-dark border-b">
 								<tr className="">
-									<th scope="col" className="px-12 py-3 text-center font-bold" colSpan="5">
+									<th scope="col" className="px-12 border-b py-3 text-center font-bold" colSpan="6">
 										Riwayat Penukaran
 									</th>
 								</tr>
