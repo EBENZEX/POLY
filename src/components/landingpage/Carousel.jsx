@@ -12,37 +12,30 @@ import image4 from "../../images/landingpage/card4.png";
 const Carousel = () => {
 	return (
 		<div className="w-full bg-[#E2E8FF] h-full cursor-pointer">
-			<div className="flex container mx-auto items-center justify-center"> {/* Center the Swiper container */}
+			<div className="flex container mx-auto items-center justify-center">
 				<Swiper
 					modules={[Pagination]}
 					pagination={{ clickable: true }}
-					centeredSlides={true} // Center slides by default
+					centeredSlides={true}
+					spaceBetween={125}
 					className="pl-5 sm:pl-10 lg:px-20 xl:px-6"
 					breakpoints={{
 						0: {
 							slidesPerView: 1,
 							centeredSlides: true,
-							spaceBetween: 150,
+							spaceBetween: 75,
 						},
-						750: {
-							slidesPerView: 1.5,
-							centeredSlides: true,
-							spaceBetween: 0,
+						450: {
+							slidesPerView: 1.8,
 						},
-						1080: {
+						950: {
 							slidesPerView: 2,
-							centeredSlides: false,
-							spaceBetween: 100,
 						},
 						1251: {
 							slidesPerView: 3,
-							centeredSlides: false,
-							spaceBetween: 100,
 						},
 						1600: {
 							slidesPerView: 3.5,
-							centeredSlides: false,
-							spaceBetween: 100,
 						},
 					}}
 				>

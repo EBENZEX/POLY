@@ -44,10 +44,10 @@ export default function Register() {
 				</div>
 
 				{/* SIGN UP */}
-				<div className={`${form.box} order-1 lg:order-2 rounded-t-xl md:rounded-r-xl md:rounded-bl-none`}>
-					<h1 className="text-center text-gray-700 font-bold text-4xl mb-5">Sign Up</h1>
+				<div className={`${form.box} order-1 lg:order-2 rounded-t-xl md:rounded-r-xl md:rounded-bl-none px-6 md:px-10`}>
+					<h1 className="text-center text-gray-700 font-bold text-2xl md:text-4xl mb-5">Sign Up</h1>
 
-					<div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-8 text-gray-500">
+					<div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 mt-3 md:gap-8 text-gray-500">
 						{/* USERNAME */}
 						<label htmlFor="username" className="grid order-1 md:order-1">
 							<input
@@ -58,7 +58,7 @@ export default function Register() {
 								name="username"
 								type="text"
 							/>
-							<h2 className={`font-bold text-md ${!userField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}>
+							<h2 className={`font-bold text-md pl-4 ${!userField ? "-translate-y-6 cursor-pointer" : "-translate-y-14"}`}>
 								Username
 							</h2>
 						</label>
@@ -74,7 +74,7 @@ export default function Register() {
 								type="password"
 							/>
 							<h2
-								className={`font-bold text-md ${!passwordField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}
+								className={`font-bold text-md pl-4 ${!passwordField ? "-translate-y-6 cursor-pointer" : "-translate-y-14"}`}
 							>
 								Password
 							</h2>
@@ -91,7 +91,7 @@ export default function Register() {
 								type="password"
 							/>
 							<h2
-								className={`font-bold text-md ${!confirmField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}
+								className={`font-bold text-md pl-4 ${!confirmField ? "-translate-y-6 cursor-pointer" : "-translate-y-14"}`}
 							>
 								Confirm Password
 							</h2>
@@ -109,7 +109,7 @@ export default function Register() {
 								type="date"
 							/>
 							<h2
-								className={`font-bold text-md ${!birthdayField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}
+								className={`font-bold text-md pl-4 ${!birthdayField ? "-translate-y-6 cursor-pointer" : "-translate-y-14"}`}
 							>
 								Birthday
 							</h2>
@@ -126,7 +126,7 @@ export default function Register() {
 								name="genderField"
 								type="text"
 							/>
-							<h2 className={`font-bold text-md ${!genderField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}>
+							<h2 className={`font-bold text-md pl-4 ${!genderField ? "-translate-y-6 cursor-pointer" : "-translate-y-14"}`}>
 								Gender
 							</h2>
 						</label>
@@ -141,7 +141,7 @@ export default function Register() {
 								name="emailField"
 								type="email"
 							/>
-							<h2 className={`font-bold text-md ${!emailField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}>
+							<h2 className={`font-bold text-md pl-4 ${!emailField ? "-translate-y-6 cursor-pointer" : "-translate-y-14"}`}>
 								Email
 							</h2>
 						</label>
@@ -153,19 +153,19 @@ export default function Register() {
 					</Link>
 
 					{/* ALT WAY LOGIN (DUMMY FITUR) */}
-					<span className="text-center">Or Try Login In Another Way</span>
-					<div className="flex justify-center items-center gap-5 -mt-5">
+					<span className="text-center text-sm md:text-lg">Or Try Login In Another Way</span>
+					<div className="flex justify-center items-center gap-5 -mt-4">
 						<a target="_blank" href="https://facebook.com">
-							<FaFacebook className="size-6 hover:text-blue-600" />
+							<FaFacebook className="size-4 md:size-6 hover:text-blue-600" />
 						</a>
 						<a target="_blank" href="https://instagram.com">
-							<FaInstagram className="size-6 hover:text-red-600" />
+							<FaInstagram className="size-4 md:size-6 hover:text-red-600" />
 						</a>
 						<a target="_blank" href="https://twitter.com">
-							<FaTwitter className="size-6 hover:text-blue-600" />
+							<FaTwitter className="size-4 md:size-6 hover:text-blue-600" />
 						</a>
 						<a target="_blank" href="https://google.com">
-							<FaGoogle className="size-6 hover:text-red-600" />
+							<FaGoogle className="size-4 md:size-6 hover:text-red-600" />
 						</a>
 					</div>
 				</div>

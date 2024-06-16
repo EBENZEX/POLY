@@ -62,61 +62,69 @@ export default function Login() {
 	return (
 		<section className={`${container.fluid} px-0 min-h-screen`}>
 			<div className={`${container.box1} px-0 grid md:grid-cols-5 lg:grid-cols-2`}>
-			{/* <div> */}
+				{/* <div> */}
 				<div
 					className={`${form.box} md:col-span-3 lg:col-span-1 h-[80vh] rounded-t-xl md:rounded-br-none md:rounded-l-xl lg:h-fit order-2 md:order-1`}
 				>
-					<h1 className="text-center font-bold text-4xl mb-8">Sign In</h1>
+					<h1 className="text-center font-bold text-2xl md:text-4xl mb-8">Sign In</h1>
 
-					<label htmlFor="username" className="grid">
+					<label htmlFor="username" className="grid px-4 md:px-12 mt-4">
 						<input
 							className={form.input}
-							onFocus={(event)=>handleOpenUser(event.target.value)}
-							onBlur={(event)=>handleOpenUser(event.target.value)}
+							onFocus={(event) => handleOpenUser(event.target.value)}
+							onBlur={(event) => handleOpenUser(event.target.value)}
 							onChange={handleUser}
 							value={user}
 							id="username"
 							name="username"
 							type="text"
 						/>
-						<h2 className={`font-bold text-md ${!userField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}>
+						<h2
+							className={`font-medium pl-3 text-sm md:text-lg ${
+								!userField ? "-translate-y-6 md:-translate-y-9 cursor-pointer text-slate-600" : "-translate-y-12 md:-translate-y-20"
+							}`}
+						>
 							Username
 						</h2>
 					</label>
 
-					<label htmlFor="password" className="grid">
+					<label htmlFor="password" className="grid px-4 md:px-12">
 						<input
 							className={form.input}
-							onFocus={(event)=>handleOpenPassword(event.target.value)}
-							onBlur={(event)=>handleOpenPassword(event.target.value)}
+							onFocus={(event) => handleOpenPassword(event.target.value)}
+							onBlur={(event) => handleOpenPassword(event.target.value)}
 							onChange={handlePassword}
 							value={password}
 							id="password"
 							name="password"
 							type="password"
 						/>
-						<h2 className={`font-bold text-md ${!passwordField ? "-translate-y-8 cursor-pointer" : "-translate-y-14"}`}>
+						<h2
+							className={`font-medium text-slate-600 pl-4 text-sm md:text-lg ${
+								!passwordField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-12 md:-translate-y-20"
+							}`}
+						>
 							Password
 						</h2>
 					</label>
 
-					<button className={`${form.btn} text-center`} onClick={handleBtn}>
+					<button className={`${form.btn} mx-4 md:mx-12 text-center`} onClick={handleBtn}>
 						Login
 					</button>
 
-					<span className="text-center">Or Try Login In Another Way</span>
+					<span className="text-center text-xs md:text-lg">Or Try Login In Another Way</span>
 					<div className="flex justify-center items-center gap-5 -mt-5">
 						<a target="_blank" href="https://facebook.com" rel="noopener noreferrer">
-							<FaFacebook className="size-6 hover:text-blue-600" />
+							<FaFacebook className="size-4 md:size-6 hover:text-blue-600" />
 						</a>
 						<a target="_blank" href="https://instagram.com" rel="noopener noreferrer">
-							<FaInstagram className="size-6 hover:text-red-600" />
+							<FaInstagram className="size-4 md:size-6 hover:text-red-600" />
 						</a>
 						<a target="_blank" href="https://twitter.com" rel="noopener noreferrer">
-							<FaTwitter className="size-6 hover:text-blue-600" />
+							<FaTwitter className="size-4 md:size-6 hover:text-blue-600" />
 						</a>
 						<a target="_blank" href="https://google.com" rel="noopener noreferrer">
-							<FaGoogle className="size-6 hover:text-red-600" />
+							<FaGoogle className="size-4 md:size-6 hover:text-red-600" />
 						</a>
 					</div>
 				</div>
