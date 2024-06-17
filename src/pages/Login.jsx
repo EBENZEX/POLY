@@ -60,11 +60,11 @@ export default function Login() {
 	}, [showMessage, isValid, navigate]);
 
 	return (
-		<section className={`${container.fluid} px-0 min-h-screen`}>
+		<section className={`${container.fluid} pl-4 pr-7 min-h-screen`}>
 			<div className={`${container.box1} px-0 grid md:grid-cols-5 lg:grid-cols-2`}>
 				{/* <div> */}
 				<div
-					className={`${form.box} md:col-span-3 lg:col-span-1 h-[80vh] rounded-t-xl md:rounded-br-none md:rounded-l-xl lg:h-fit order-2 md:order-1`}
+					className={`${form.box} md:col-span-6 lg:col-span-1 h-[80vh] rounded-xl md:rounded-br-none md:rounded-l-xl lg:h-fit order-2 md:order-1`}
 				>
 					<h1 className="text-center font-bold text-2xl md:text-4xl mb-8">Sign In</h1>
 
@@ -80,7 +80,7 @@ export default function Login() {
 							type="text"
 						/>
 						<h2
-							className={`font-medium pl-3 text-sm md:text-lg ${
+							className={`font-medium pl-2 text-sm md:text-lg ${
 								!userField ? "-translate-y-6 md:-translate-y-9 cursor-pointer text-slate-600" : "-translate-y-12 md:-translate-y-20"
 							}`}
 						>
@@ -100,8 +100,8 @@ export default function Login() {
 							type="password"
 						/>
 						<h2
-							className={`font-medium text-slate-600 pl-4 text-sm md:text-lg ${
-								!passwordField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-12 md:-translate-y-20"
+							className={`font-medium pl-2 text-sm md:text-lg ${
+								!passwordField ? "-translate-y-6 md:-translate-y-9 cursor-pointer text-slate-600" : "-translate-y-12 md:-translate-y-20"
 							}`}
 						>
 							Password
@@ -129,7 +129,7 @@ export default function Login() {
 					</div>
 				</div>
 
-				<div className={`order-2 md:col-span-2 lg:col-span-1 flex md:order-1`}>
+				<div className={`order-2 hidden md:col-span-2 lg:col-span-1 lg:flex md:order-1`}>
 					<img src={Image} alt="Login" />
 				</div>
 			</div>

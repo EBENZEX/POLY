@@ -10,7 +10,7 @@ export default function DashboardProfile() {
 		<main className="w-full h-full grid">
 			{/* BG COVER */}
 			<div className="hidden lg:grid w-full h-1/3">
-				<img src={heroImage} alt="" />
+				<img className="w-full" src={heroImage} alt="" />
 			</div>
 
 			{/* BOX */}

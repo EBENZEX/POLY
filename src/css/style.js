@@ -48,7 +48,7 @@ export const nav = {
 
 export const container = {
 	fluid: "w-screen px-10 md:px-20 py-4 md:py-8",
-	box1: "container py-8 mx-auto flex flex-col gap-8",
+	box1: "container py-8 mx-auto grid gap-8",
 	box2: "container mx-auto grid gap-10",
 };
 
