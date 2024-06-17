@@ -16,7 +16,7 @@ const Carousel = () => {
 				<Swiper
 					modules={[Pagination]}
 					pagination={{ clickable: true }}
-					centeredSlides={true}
+					centeredSlides={false}
 					spaceBetween={125}
 					className="pl-5 sm:pl-10 lg:px-20 xl:px-6"
 					breakpoints={{
