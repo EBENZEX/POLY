@@ -30,7 +30,7 @@ export default function DashboardProfile() {
 				<div className="flex flex-col md:grid md:grid-cols-12 mt-10 lg:mt-0 gap-4">
 					<CardProfile />
 					<CardBalance />
-					<CardIncome bg="#C4FFAF" header="CardIncome" text="+Rp 50,000" />
+					<CardIncome bg="#C4FFAF" header="Income" text="+Rp 50,000" />
 					<CardIncome bg='#FF7878' header="Outcome" text="-Rp 50,000" />
 				</div>
 				<CardChart />
