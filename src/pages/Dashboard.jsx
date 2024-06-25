@@ -22,24 +22,48 @@ export default function Dashboard() {
 	return (
 		<div className="w-screen h-screen flex">
 			{/* Notification */}
-			<div
+			{/* <div
 				className={`absolute transition-all duration-500 ease-in-out ${
 					notif ? "opacity-100 z-50" : "opacity-0 -z-50"
 				} backdrop-blur-sm w-full h-full flex justify-center items-center`}
 			>
 				<div className=" mx-10 bg-white grid shadow-2xl rounded-[2rem] w-3/4 sm:w-1/2 lg:w-1/3 h-3/4">
-					<div className="text-white bg-[#836FFF] rounded-t-[2rem] font-bold text-xl flex justify-center items-center py-3">
+					<div className="text-white bg-[#836FFF] rounded-t-[2rem] font-bold text-xl flex justify-center items-center py-2 ">
 						<h1>Notification</h1>
 					</div>
 
-					<div className="flex mt-[2rem] mb-[10rem] text-xs gap-5 mx-8 justify-between items-center border-b border-black">
+					<div className="flex mt-[2.8rem] mb-[9rem] text-xs gap-5 mx-8 justify-between items-center border-b border-black">
 						<img src={Logo} className="w-8 md:w-16" alt="" />
 						<p>Selamat Datang Di POLY!. Jika anda terdapat keluhan dari masalah silahkan hubungi contact kami.</p>
 					</div>
 
 					<div
 						onClick={handleNotif}
-						className="rounded-b-[2rem] cursor-pointer hover:bg-red-900 bg-red-700 py-3 flex justify-center items-center text-white font-bold"
+						className="rounded-b-[2rem] cursor-pointer hover:bg-red-900 bg-red-700 py-2 flex justify-center items-center text-white font-bold"
+					>
+						<X />
+					</div>
+				</div>
+			</div> */}
+
+			<div
+				className={`absolute transition-all duration-500 ease-in-out ${
+					notif ? "opacity-100 z-50" : "opacity-0 -z-50"
+				} backdrop-blur-sm w-full h-full flex justify-center items-center`}
+			>
+				<div className=" mx-10 bg-white grid grid-rows-9 shadow-2xl rounded-[2rem] w-3/4 sm:w-1/2 lg:w-1/3 h-3/4">
+					<div className="row-start-1 text-white bg-[#836FFF] rounded-t-[2rem] font-bold text-xl flex justify-center items-center py-2 ">
+						<h1>Notification</h1>
+					</div>
+
+					<div className="row-start-3 row-span-5 flex mt-[2.8rem] mb-[9rem] text-sm gap-5 mx-8 justify-between items-center border-b border-black">
+						<img src={Logo} className="w-10 md:w-20" alt="" />
+						<p>Selamat Datang Di POLY!. Jika anda terdapat keluhan dari masalah silahkan hubungi contact kami.</p>
+					</div>
+
+					<div
+						onClick={handleNotif}
+						className="row-start-9 rounded-b-[2rem] cursor-pointer hover:bg-red-900 bg-red-700 py-2 flex justify-center items-center text-white font-bold"
 					>
 						<X />
 					</div>

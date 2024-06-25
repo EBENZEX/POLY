@@ -9,8 +9,8 @@ export default function Balance() {
 					<h1 className=" font-bold text-xl md:translate-y-8">Rp 15,000,00</h1>
 				</div>
 
-				<div className="flex flex-col md:flex-row gap-4 md:gap-28 lg:gap-8 mt-3 justify-betwee text-sm lg:text-xs">
-					<span>5294 2346 4780 2468</span>
+				<div className="w-full flex flex-row gap-4 md:gap-28 lg:gap-8 mt-3 justify-between text-sm lg:text-xs">
+					<span className="">5294 2346 4780 2468</span>
 					<span className="text-right">12/24</span>
 				</div>
 			</div>

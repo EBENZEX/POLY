@@ -26,7 +26,7 @@ export default function DashboardProfile() {
 			</div>
 
 			{/* box 2 */}
-			<div className="lg:hidden flex flex-col flex-1 gap-6  pl-4 pr-24 w-screen">
+			<div className="lg:hidden flex flex-col flex-1 gap-6  pl-4 pr-[5.75rem] w-screen">
 				<div className="flex flex-col md:grid md:grid-cols-12 mt-10 lg:mt-0 gap-4">
 					<CardProfile />
 					<CardBalance />

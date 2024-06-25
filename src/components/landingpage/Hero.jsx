@@ -23,7 +23,10 @@ export default function Hero() {
 					<p>Unlimited Free Usage</p>
 				</div>
 
-				<Link to={'/register'} className="bg-initial w-full lg:w-1/6 px-10 md:px-2 py-2 text-xl text-center font-bold hover:bg-[#836FFF] hover:text-white border-2 rounded-[1.3rem] border-[#836FFF]">
+				<Link
+					to={"/register"}
+					className="w-full lg:w-1/6 px-10 md:px-2 py-2 text-xl text-center font-bold bg-[#836FFF] hover:bg-[#6c5bdb] text-white border-2 rounded-[1.3rem] border-none"
+				>
 					Get Started
 				</Link>
 			</div>
