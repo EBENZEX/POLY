@@ -8,17 +8,11 @@ import DashboardProfile from "../components/dashboard/Profile";
 import DashboardCash from "../components/dashboard/TrashToCash";
 import { useState } from "react";
 
+
 export default function Dashboard() {
 	const [notif, setNotif] = useState(false);
 	const [support, setSupport] = useState(false);
 
-	function handleNotif() {
-		setNotif(!notif);
-	}
-
-	function handleSupport() {
-		setSupport(!support);
-	}
 	return (
 		<div className="w-screen h-screen flex">
 			{/* Notification */}
@@ -62,7 +56,7 @@ export default function Dashboard() {
 					</div>
 
 					<div
-						onClick={handleNotif}
+						onClick={() => setNotif((cur) => !cur)}
 						className="row-start-9 rounded-b-[2rem] cursor-pointer hover:bg-red-900 bg-red-700 py-2 flex justify-center items-center text-white font-bold"
 					>
 						<X />
@@ -89,7 +83,7 @@ export default function Dashboard() {
 					</div>
 
 					<div
-						onClick={handleSupport}
+						onClick={() => setSupport((cur) => !cur)}
 						className="rounded-b-[2rem] cursor-pointer hover:bg-red-900 bg-red-700 py-3 flex justify-center items-center text-white font-bold"
 					>
 						<X />
@@ -104,10 +98,10 @@ export default function Dashboard() {
 					<SidebarItem path="/dashboard-profile" icon={<User color="#fff" size={20} />} text="Profile" />
 					<SidebarItem path="/dashboard-cash" icon={<HandCoins color="#fff" size={20} />} text="Trade" />
 					<hr className="my-3" />
-					<div onClick={handleNotif}>
+					<div onClick={() => setNotif((cur) => !cur)}>
 						<SidebarItem icon={<Bell color="#fff" size={20} />} text="Notification" />
 					</div>
-					<div onClick={handleSupport}>
+					<div onClick={() => setSupport((cur) => !cur)}>
 						<SidebarItem icon={<CircleHelp color="#fff" size={20} />} text="Help" />
 					</div>
 				</Sidebar>
@@ -117,6 +111,7 @@ export default function Dashboard() {
 			<div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
 				<Header />
 				<div className="bg-[#F0F3FF]">
+
 					{location.pathname === "/dashboard-home" && (
 						<>
 							<PageTitle title={"POLY | DASHBOARD HOME"} />

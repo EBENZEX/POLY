@@ -62,9 +62,9 @@ export const bussiness = {
 };
 
 export const form = {
-	input: "pl-2 md:py-2 transition-transform bg-inherit duration-100 ease-in-out border-2 rounded-lg border-slate-400 text-slate-600 font-bold border-slate-600 focus:outline-none",
-	box: "flex flex-col justify-center gap-6 bg-[#E2E8FF] py-6 md:h-fit",
-	btn: "text-sm md:text-xl rounded-xl font-bold py-1 md:py-2 bg-[#15F5BA] hover:bg-[#13c293]",
+	input: "pl-2 py-1 md:py-2 transition-transform bg-inherit duration-100 ease-in-out border-2 rounded-lg border-slate-400 text-slate-600 font-bold border-slate-600 focus:outline-none",
+	box: "flex h-full flex-col justify-center gap-6 bg-[#E2E8FF] py-6 md:h-fit",
+	btn: "w-[85%] mx-auto text-sm md:text-xl rounded-xl font-bold py-1 md:py-2 bg-[#15F5BA] hover:bg-[#13c293]",
 };
 
 export const footer = {

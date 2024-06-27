@@ -16,9 +16,8 @@ const Carousel = () => {
 				<Swiper
 					modules={[Pagination]}
 					pagination={{ clickable: true }}
-					centeredSlides={false}
-					spaceBetween={125}
-					className="pl-5 sm:pl-10 lg:px-20 xl:px-6"
+					spaceBetween={75}
+					className="px-5 sm:px-10 lg:px-20 xl:px-6"
 					breakpoints={{
 						0: {
 							slidesPerView: 1,
@@ -26,21 +25,34 @@ const Carousel = () => {
 							spaceBetween: 75,
 						},
 						450: {
+							slidesPerView: 1.5,
+							centeredSlides: false,
+							spaceBetween: 100,
+						},
+						650: {
 							slidesPerView: 1.8,
+							centeredSlides: false,
+							spaceBetween: 105,
 						},
 						950: {
 							slidesPerView: 2,
+							centeredSlides: false,
+							spaceBetween: 125,
 						},
 						1251: {
 							slidesPerView: 3,
+							centeredSlides: false,
+							spaceBetween: 125,
 						},
 						1600: {
 							slidesPerView: 3.5,
+							centeredSlides: false,
+							spaceBetween: 125,
 						},
 					}}
 				>
 					<SwiperSlide>
-						<div className={`${carousel.card} px-10 bg-gradient-to-r from-[#35A29F] to-[#0B666A]`}>
+						<div className={`${carousel.card} px-10 bg-gradient-to-r from-[#35A29F] to-[#0B666A]  mx-auto`}>
 							<div className={`${carousel.box1}`}>
 								<h1>Tidak</h1>
 								<h1>menghabiskan</h1>
@@ -51,7 +63,7 @@ const Carousel = () => {
 					</SwiperSlide>
 
 					<SwiperSlide>
-						<div className={`${carousel.card} bg-gradient-to-r from-[#FFC7DB] to-[#997783]`}>
+						<div className={`${carousel.card} bg-gradient-to-r from-[#FFC7DB] to-[#997783] mx-auto`}>
 							<img className="h-[10rem] lg:h-[10rem] -ml-6" src={image2} alt="" />
 							<div className={`${carousel.box2}`}>
 								<h1>Hasilkan Uang</h1>
@@ -61,7 +73,7 @@ const Carousel = () => {
 					</SwiperSlide>
 
 					<SwiperSlide>
-						<div className={`${carousel.card} bg-gradient-to-r from-[#F7FFC7] to-[#949977]`}>
+						<div className={`${carousel.card} bg-gradient-to-r from-[#F7FFC7] to-[#949977] mx-auto`}>
 							<img className="h-[10rem] lg:h-[10rem] w-[10rem] md:w-[14rem] lg:w-[10rem]" src={image3} alt="" />
 							<div className={`${carousel.box2}`}>
 								<h1>Layanan Cepat</h1>
@@ -71,7 +83,7 @@ const Carousel = () => {
 					</SwiperSlide>
 
 					<SwiperSlide>
-						<div className={`${carousel.card} bg-gradient-to-r from-[#E14343] to-[#7B2525]`}>
+						<div className={`${carousel.card} bg-gradient-to-r from-[#E14343] to-[#7B2525] mx-auto`}>
 							<div className={`${carousel.box1}`}>
 								<h1>Penggunaan Yang</h1>
 								<h1>Dipahami Dengan</h1>

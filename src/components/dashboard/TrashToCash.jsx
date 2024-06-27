@@ -1,9 +1,77 @@
+import { createContext, useState, useEffect } from "react";
 import Image from "../../images/dashboard/trash.png";
 import { SquareCheckBig } from "lucide-react";
 
+export const Context = createContext();
+
 export default function TrashToCash() {
+	const [data, setData] = useState([]);
+	const [id, setId] = useState("P08662821");
+	const [file, setFile] = useState("");
+	const [lokasi, setLokasi] = useState("");
+	const [berat, setBerat] = useState("");
+	const [penukaran, setPenukaran] = useState(0);
+	const [totalSampah, setTotalSampah] = useState(0);
+	const [uangTerkumpul, setUangTerkumpul] = useState(0);
+
+	useEffect(() => {
+		const storedData = localStorage.getItem("data");
+		if (storedData) {
+			const parsedData = JSON.parse(storedData);
+			setData(parsedData);
+			setPenukaran(parsedData[6] || 0);
+			setTotalSampah(parsedData[7] || 0);
+			setUangTerkumpul(parsedData[8] || 0);
+		}
+	}, []);
+
+	function handleClick() {
+		// IMPORTANT (TAMBAHKAN FILE AUTH)
+		if (!lokasi || !berat) {
+			alert("Semua Field harus diisi");
+			return;
+		}
+
+		let newId = "P0";
+		for (let i = 0; i <= 6; i++) {
+			newId += Math.floor(Math.random() * 9);
+		}
+
+		const updatedPenukaran = penukaran + 1;
+		const updatedTotalSampah = totalSampah + parseFloat(berat);
+		const updatedUangTerkumpul = uangTerkumpul + 5000;
+
+		setPenukaran(updatedPenukaran);
+		setTotalSampah(updatedTotalSampah);
+		setUangTerkumpul(updatedUangTerkumpul);
+
+		setId(newId);
+		setData((prevData) => {
+			const newData = [
+				...prevData,
+				[newId, file, lokasi, berat, "Pak Dengklek", 5000, updatedPenukaran, updatedTotalSampah],
+			];
+			localStorage.setItem("data", JSON.stringify(newData));
+			return newData;
+		});
+
+		// CLEAR INPUT
+		setFile("");
+		setLokasi("");
+		setBerat("");
+	}
+
+	function clear() {
+		localStorage.clear();
+		window.location.reload();
+	}
+
+	function clear() {
+		localStorage.clear();
+		window.location.reload();
+	}
 	return (
-		<div className="">
+		<div>
 			<span className="absolute text-white text-4xl top-5 left-4 cursor-pointer" onClick="Openbar()">
 				<div className="sidebar buka fixed top-0 bottom-0 sm:left-[-100px] md:left-[0px] lg:left-0 left-[-100px] p-2 w-[100px] overflow-y-auto text-center bg-sdb shadow h-screen">
 					<div className="text-gray-100 text-xl" />
@@ -48,19 +116,19 @@ export default function TrashToCash() {
 						</div>
 
 						<hr className="my-2 mx-5 text-gray-600" />
-						
+
 						<div className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
 							<img src="img/wallet.png" alt="" className="w-auto h-auto" />
 							<span className="text-[15px] ml-4 text-gray-200 font-bold">Wallet</span>
 						</div>
-						
+
 						<hr className="my-2 mx-5 text-gray-600" />
-						
+
 						<div className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
 							<img src="img/trd.png" alt="" className="w-auto h-auto" />
 							<span className="text-[15px] ml-4 text-gray-200 font-bold">Trash To Cash</span>
 						</div>
-						
+
 						<hr className="my-2 mx-5 text-gray-600" />
 					</div>
 				</div>
@@ -81,7 +149,7 @@ export default function TrashToCash() {
 									<input
 										type="text"
 										id="id-penukaran"
-										value="P086628212412"
+										value={id}
 										className="bg-gray-400 text-center text-white font-bold appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
 										readOnly
 									/>
@@ -92,7 +160,13 @@ export default function TrashToCash() {
 										Foto Sampah & Video Sekitar
 									</label>
 
-									<input type="file" className="bg-white w-full rounded-sm" id="foto-sampah" />
+									<input
+										type="file"
+										onChange={(event) => setFile(event.target.value)}
+										value={file}
+										className="bg-gray-400 text-white w-full rounded-sm"
+										id="foto-sampah"
+									/>
 								</div>
 
 								<div className="mb-4">
@@ -103,6 +177,9 @@ export default function TrashToCash() {
 									<input
 										type="text"
 										id="lokasi-daerah"
+										onChange={(event) => setLokasi(event.target.value)}
+										value={lokasi}
+										placeholder="Ex : Medan"
 										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 									/>
 								</div>
@@ -115,16 +192,28 @@ export default function TrashToCash() {
 									<input
 										type="text"
 										id="berat-sampah"
+										onChange={(event) => setBerat(event.target.value)}
+										value={berat}
+										placeholder="Ex : 10kg"
 										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 									/>
 								</div>
 
-								<div className="flex items-center justify-center">
+								<div className="flex items-center justify-center gap-10">
 									<button
 										className="bg-[#15F5BA] hover:bg-teal-700 text-dark font-bold py-2 px-7 rounded-lg focus:outline-none focus:shadow-outline"
 										type="button"
+										onClick={handleClick}
 									>
 										S I M P A N
+									</button>
+
+									<button
+										className="bg-[#15F5BA] hover:bg-teal-700 text-dark font-bold py-2 px-7 rounded-lg focus:outline-none focus:shadow-outline"
+										type="button"
+										onClick={() => clear()}
+									>
+										R E S E T
 									</button>
 								</div>
 							</form>
@@ -172,7 +261,7 @@ export default function TrashToCash() {
 			</main>
 
 			<aside id="main-content2" className="w-full tb lg:pl-14 md:pl-14 duration-1000">
-				<div className="overflow-x-scroll container mx-auto mt-8 px-4 sm:px-6">
+				<div className="overflow-x-auto container mx-auto mt-8 px-4 sm:px-6">
 					<div className="relative shadow-md sm:rounded-lg">
 						<table className="w-full text-sm text-left rtl:text-right border text-dark-500 dark:text-dark-400">
 							<thead className="font-bold bg-white text-dark border-b">
@@ -203,16 +292,30 @@ export default function TrashToCash() {
 								</tr>
 							</thead>
 							<tbody>
-								<tr className="bg-white border-b">
-									<td className="px-6 text-center text-red-500 py-20" colSpan="6">
-										Belum Ada penukaran nih...
-									</td>
-								</tr>
+								{data.length !== 0 ? (
+									data.map((e, i) => (
+										<tr key={i} className="bg-white font-semibold border-b">
+											<td className="py-3 px-7 text-red-500">{e[0]}</td>
+											<td className="py-3 px-12">{e[2]}</td>
+											<td className="py-3 px-12">{e[3]}</td>
+											<td className="py-3 px-9">Rp. 5,000</td>
+											<td className="py-3">{e[1]}</td>
+											<td className="py-3 px-6 text-green-500">Sukses</td>
+										</tr>
+									))
+								) : (
+									<tr className="bg-white border-b">
+										<td className="px-6 text-center text-red-500 py-20" colSpan="6">
+											Belum Ada penukaran nih...
+										</td>
+									</tr>
+								)}
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</aside>
+
 			<div className="text-white m-[20px]">.</div>
 		</div>
 	);
