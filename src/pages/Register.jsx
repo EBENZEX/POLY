@@ -58,7 +58,7 @@ export default function Register() {
 								name="username"
 								type="text"
 							/>
-							<h2 className={`font-bold text-md pl-4 ${!userField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14"}`}>
+							<h2 className={`font-bold text-md pl-4 ${!userField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14 md:-translate-y-[4.5rem]"}`}>
 								Username
 							</h2>
 						</label>
@@ -74,7 +74,7 @@ export default function Register() {
 								type="password"
 							/>
 							<h2
-								className={`font-bold text-md pl-4 ${!passwordField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14"}`}
+								className={`font-bold text-md pl-4 ${!passwordField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14 md:-translate-y-[4.5rem]"}`}
 							>
 								Password
 							</h2>
@@ -91,7 +91,7 @@ export default function Register() {
 								type="password"
 							/>
 							<h2
-								className={`font-bold text-md pl-4 ${!confirmField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14"}`}
+								className={`font-bold text-md pl-4 ${!confirmField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14 md:-translate-y-[4.5rem]"}`}
 							>
 								Confirm Password
 							</h2>
@@ -109,7 +109,7 @@ export default function Register() {
 								type="date"
 							/>
 							<h2
-								className={`font-bold text-md pl-4 ${!birthdayField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14"}`}
+								className={`font-bold text-md pl-4 ${!birthdayField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14 md:-translate-y-[4.5rem]"}`}
 							>
 								Birthday
 							</h2>
@@ -126,7 +126,7 @@ export default function Register() {
 								name="genderField"
 								type="text"
 							/>
-							<h2 className={`font-bold text-md pl-4 ${!genderField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14"}`}>
+							<h2 className={`font-bold text-md pl-4 ${!genderField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14 md:-translate-y-[4.5rem]"}`}>
 								Gender
 							</h2>
 						</label>
@@ -141,7 +141,7 @@ export default function Register() {
 								name="emailField"
 								type="email"
 							/>
-							<h2 className={`font-bold text-md pl-4 ${!emailField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14"}`}>
+							<h2 className={`font-bold text-md pl-4 ${!emailField ? "-translate-y-6 md:-translate-y-9 cursor-pointer" : "-translate-y-14 md:-translate-y-[4.5rem]"}`}>
 								Email
 							</h2>
 						</label>

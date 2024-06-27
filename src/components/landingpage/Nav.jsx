@@ -17,17 +17,28 @@ export default function Nav() {
 					<img className="w-16 hover:scale-125" src={Logo} alt="" />
 				</NavLink>
 
-				{/* MD KEATAS */}
+				{/* LG KEATAS */}
 				<div className={`${nav.box} gap-8`}>
 					<NavLink to={"/"} className={nav.link}>
 						Home
 					</NavLink>
+
+					<NavLink to={"/#skenario"} className={nav.link}>
+						Trade
+					</NavLink>
+
+					<NavLink to={"/#distribusi"} className={nav.link}>
+						Distribution
+					</NavLink>
+
 					<NavLink to={"/#about"} className={nav.link}>
 						About Us
 					</NavLink>
+
 					<NavLink to={"/#bussiness"} className={nav.link}>
 						Business
 					</NavLink>
+
 					<NavLink to={"/#contact"} className={nav.link}>
 						Contact
 					</NavLink>
@@ -43,17 +54,25 @@ export default function Nav() {
 					</NavLink>
 				</div>
 
-				{/* MD KEBAWAH */}
-				<div className="md:hidden cursor-pointer hover:scale-125 p-2 rounded-xl" onClick={handleIsClick}>
+				{/* LG KEBAWAH */}
+				<div className="lg:hidden cursor-pointer hover:scale-125 p-2 rounded-xl" onClick={handleIsClick}>
 					{isClick ? <FiX className="size-6" /> : <FiMenu className="size-6" />}
 				</div>
 			</div>
 
 			{/* RENDER */}
 			{isClick && (
-				<div className="md:hidden bg-[#F0F3FF] grid font-bold text-xl -mx-8 pt-4 text-[#836FFF]">
+				<div className="lg:hidden bg-[#F0F3FF] grid font-bold text-xl -mx-8 pt-4 text-[#836FFF]">
 					<NavLink to={"/"} className={"hover:bg-slate-200 pl-8 py-3"}>
 						Home
+					</NavLink>
+
+					<NavLink to={"/#skenario"} className={nav.linkSmall}>
+						Trade
+					</NavLink>
+
+					<NavLink to={"/#distribusi"} className={nav.linkSmall}>
+						Distribution
 					</NavLink>
 
 					<NavLink to={"/#about"} className={nav.linkSmall}>

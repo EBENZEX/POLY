@@ -1,6 +1,6 @@
 import Img from "../../images/dashboard/user-06.png";
 
-export default function CardProfile() {
+export default function CardProfile({ state, ...rest }) {
 	return (
 		<div className="flex flex-1 md:col-span-5 lg:col-span-3 h-full bg-white md:justify-center lg:justify-start shadow-xl rounded-xl lg:rounded-none md:rounded-br-xl md:flex-col md:items-center gap-4 px-5 md:px-0 md:gap-5 py-6">
 			<div className="flex flex-col md:flex-row items-center gap-2">

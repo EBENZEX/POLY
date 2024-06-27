@@ -5,11 +5,18 @@ import Image3 from "../../images/dashboard/icon3.png";
 
 export default function Home() {
 	const [data, setData] = useState([]);
+	const [totalPenukaran, setTotalPenukaran] = useState(0);
+	const [totalBerat, setTotalBerat] = useState(0);
 
 	useEffect(() => {
 		const storedData = localStorage.getItem("data");
 		if (storedData) {
-			setData(JSON.parse(storedData));
+			const parsedData = JSON.parse(storedData);
+			setData(parsedData);
+			const totalPenukaran = parsedData.reduce((acc, curr) => acc + curr[6], 0);
+			const totalBerat = parsedData.reduce((acc, curr) => acc + parseFloat(curr[7]), 0);
+			setTotalPenukaran(totalPenukaran);
+			setTotalBerat(totalBerat);
 		}
 	}, []);
 
@@ -44,7 +51,7 @@ export default function Home() {
 								</div>
 
 								<div>
-									<p className="text-dark-700 font-bold mt-12 text-3xl">{data[6] ? data[6] : 0}</p>
+									<p className="text-dark-700 font-bold mt-12 text-3xl">{totalPenukaran}</p>
 								</div>
 							</div>
 						</div>
@@ -60,7 +67,7 @@ export default function Home() {
 								</div>
 
 								<div>
-									<p className="text-dark-700 font-bold mt-12 text-3xl">{data[7] ? data[7] : 0}</p>
+									<p className="text-dark-700 font-bold mt-12 text-3xl">{totalBerat}Kg</p>
 								</div>
 							</div>
 						</div>
@@ -74,7 +81,7 @@ export default function Home() {
 			>
 				<div className="w-[90%] lg:w-full container mx-auto mt-8 lg:px-8  py-8">
 					<div className="relative shadow-md sm:rounded-lg">
-						<table className="w-full text-lg text-left rtl:text-right text-dark-500 shadow-2xl dark:text-dark-400 ">
+						<table className="w-full text-center text-lg rtl:text-right text-dark-500 shadow-2xl dark:text-dark-400 ">
 							<thead className="font-bold bg-white text-dark border-b">
 								<tr>
 									<th scope="col" className="px-12 py-3 border-b text-center font-bold" colSpan="5">
@@ -83,23 +90,23 @@ export default function Home() {
 								</tr>
 
 								<tr>
-									<th scope="col" className="px-6 py-3">
+									<th scope="col" className="px-2 py-3">
 										ID Pengguna
 									</th>
 
-									<th scope="col" className="px-6 py-3">
+									<th scope="col" className="px-2 py-3">
 										Nama Pengguna
 									</th>
 
-									<th scope="col" className="px-6 py-3">
+									<th scope="col" className="px-2 py-3">
 										Lokasi Daerah
 									</th>
 
-									<th scope="col" className="px-6 py-3">
+									<th scope="col" className="px-2 py-3">
 										Total Sampah
 									</th>
 
-									<th scope="col" className="px-6 py-3">
+									<th scope="col" className="px-2 py-3">
 										Total Rupiah
 									</th>
 								</tr>
@@ -109,13 +116,13 @@ export default function Home() {
 								{data.length !== 0 ? (
 									data.map((e, i) => (
 										<tr className="bg-white border-b" key={i}>
-											<td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-dark">
-												#{e[0]}
+											<td scope="row" className="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-dark">
+												#P01
 											</td>
-											<td className="px-6 py-4">{e[4]}</td>
-											<td className="px-12 py-4">{e[2]}</td>
-											<td className="px-14 py-4">{e[3]}</td>
-											<td className="px-14 py-4">{e[5]}</td>
+											<td className="px-2 py-4">{e[4]}</td>
+											<td className="px-2 py-4">{e[2]}</td>
+											<td className="px-2 py-4">{e[3]}</td>
+											<td className="px-2 py-4">Rp. {new Intl.NumberFormat("id-ID").format(e[5])}</td>
 										</tr>
 									))
 								) : (

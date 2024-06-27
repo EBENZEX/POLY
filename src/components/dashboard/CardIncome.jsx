@@ -1,4 +1,4 @@
-export default function Income({ bg, header, text }) {
+export default function Income({ bg, header, text, type }) {
 	return (
 		<div
 			style={{ backgroundColor: bg }}
@@ -6,7 +6,9 @@ export default function Income({ bg, header, text }) {
 		>
 			<div className="row-span-3 grid gap-10">
 				<span className="font-medium">{header}</span>
-				<h1 className="font-bold text-3xl mb-6">{text}</h1>
+				<h1 className="font-bold text-3xl mb-6">
+					{type === "income" ? "+" : "-"}{' '}{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(text)}
+				</h1>
 			</div>
 		</div>
 	);

@@ -1,28 +1,29 @@
 import BarChart from "./charts/BarChart02";
 import { tailwindConfig } from "../dashboard/utils/Utils";
 
-function DashboardCard09() {
+function DashboardCard09({ money = 0 }) {
 	const chartData = {
 		labels: ["06-01-2024", "06-02-2024", "06-03-2024", "06-04-2024", "06-05-2024", "06-06-2024"],
 		datasets: [
-			// Light blue bars
 			{
+				// INCOME
 				label: "Stack 1",
-				data: [6200, 9200, 6600, 8800, 5200, 9200],
+				data: [5000],
 				backgroundColor: tailwindConfig().theme.colors.indigo[500],
 				hoverBackgroundColor: tailwindConfig().theme.colors.indigo[600],
 				barPercentage: 0.66,
 				categoryPercentage: 0.66,
 			},
-			// Blue bars
-			{
-				label: "Stack 2",
-				data: [-4000, -2600, -5350, -4000, -7500, -2000],
-				backgroundColor: tailwindConfig().theme.colors.indigo[200],
-				hoverBackgroundColor: tailwindConfig().theme.colors.indigo[300],
-				barPercentage: 0.66,
-				categoryPercentage: 0.66,
-			},
+			// OUTCOME
+			// 		{
+			// 			label: "Stack 2",
+			// 			data: [-4000, -2600, -5350, -4000, -7500, -2000],
+			// 			backgroundColor: tailwindConfig().theme.colors.indigo[200],
+			// 			hoverBackgroundColor: tailwindConfig().theme.colors.indigo[300],
+			// 			barPercentage: 0.66,
+			// 			categoryPercentage: 0.66,
+			// 		},
+			// 	],
 		],
 	};
 
@@ -34,7 +35,9 @@ function DashboardCard09() {
 
 			<div className="px-5 py-3">
 				<div className="flex justify-between font-bold text-slate-800 dark:text-slate-100 mb-4">
-					<div className="text-3xl">+Rp 1,234,567</div>
+					<div className="text-3xl">
+						{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(money)}
+					</div>
 					<div className="text-xl">Juni</div>
 				</div>
 			</div>

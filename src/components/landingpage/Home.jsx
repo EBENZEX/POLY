@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Hero from "./Hero";
+import Skenario from './Skenario'
+import Distribusi from './Distribusi'
 import About from "./About";
 import Bussiness from "./Bussiness";
 import Contact from "./Contact";
@@ -21,6 +23,12 @@ export default function Home() {
 			case "#contact":
 				temp = document.getElementById("contact");
 				break;
+			case "#distribusi":
+				temp = document.getElementById("distribusi");
+				break;
+			case "#skenario":
+				temp = document.getElementById("skenario");
+				break;
 			default:
 				break;
 		}
@@ -32,6 +40,8 @@ export default function Home() {
 		<section>
 			<Hero />
 			<Carousel />
+			<Skenario/>
+			<Distribusi/>
 			<About />
 			<Bussiness />
 			<Contact />

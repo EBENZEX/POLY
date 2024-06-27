@@ -27,7 +27,7 @@ export default function TrashToCash() {
 
 	function handleClick() {
 		// IMPORTANT (TAMBAHKAN FILE AUTH)
-		if (!lokasi || !berat) {
+		if (!file && !lokasi && !berat) {
 			alert("Semua Field harus diisi");
 			return;
 		}
@@ -55,24 +55,21 @@ export default function TrashToCash() {
 			return newData;
 		});
 
+		// console.log(localStorage.getItem('data'));
 		// CLEAR INPUT
 		setFile("");
 		setLokasi("");
 		setBerat("");
 	}
 
-	function clear() {
-		localStorage.clear();
-		window.location.reload();
-	}
+	// function clear() {
+	// 	localStorage.clear();
+	// 	window.location.reload();
+	// }
 
-	function clear() {
-		localStorage.clear();
-		window.location.reload();
-	}
 	return (
 		<div>
-			<span className="absolute text-white text-4xl top-5 left-4 cursor-pointer" onClick="Openbar()">
+			<span className="absolute text-white text-4xl top-5 left-4 cursor-pointer">
 				<div className="sidebar buka fixed top-0 bottom-0 sm:left-[-100px] md:left-[0px] lg:left-0 left-[-100px] p-2 w-[100px] overflow-y-auto text-center bg-sdb shadow h-screen">
 					<div className="text-gray-100 text-xl" />
 					<div className="p-2.5 mt-1 flex items-center rounded-md ">
@@ -105,7 +102,7 @@ export default function TrashToCash() {
 					<div className="mb-4 flex items-center rounded-md">
 						<img src="img/logo.png" alt="" className="w-auto h-auto px-2" />
 						<h1 className="text-[15px]  ml-28 text-xl text-gray-200 font-bold ">
-							<img src="img/ham.png" alt="" className="w-auto h-auto" onClick="Openbar()" />
+							<img src="img/ham.png" alt="" className="w-auto h-auto" />
 						</h1>
 					</div>
 
@@ -207,14 +204,14 @@ export default function TrashToCash() {
 									>
 										S I M P A N
 									</button>
-
+									{/* 
 									<button
 										className="bg-[#15F5BA] hover:bg-teal-700 text-dark font-bold py-2 px-7 rounded-lg focus:outline-none focus:shadow-outline"
 										type="button"
-										onClick={() => clear()}
+										onClick={clear}
 									>
 										R E S E T
-									</button>
+									</button> */}
 								</div>
 							</form>
 						</div>
@@ -263,7 +260,7 @@ export default function TrashToCash() {
 			<aside id="main-content2" className="w-full tb lg:pl-14 md:pl-14 duration-1000">
 				<div className="overflow-x-auto container mx-auto mt-8 px-4 sm:px-6">
 					<div className="relative shadow-md sm:rounded-lg">
-						<table className="w-full text-sm text-left rtl:text-right border text-dark-500 dark:text-dark-400">
+						<table className="w-full text-sm text-center border text-dark-500 dark:text-dark-400">
 							<thead className="font-bold bg-white text-dark border-b">
 								<tr className="">
 									<th scope="col" className="px-12 border-b py-3 text-center font-bold" colSpan="6">
@@ -271,22 +268,22 @@ export default function TrashToCash() {
 									</th>
 								</tr>
 								<tr>
-									<th scope="col" className="px-6 py-3 ">
+									<th scope="col" className="px-2 py-3 ">
 										ID Penukaran
 									</th>
-									<th scope="col" className="px-6 py-3 ">
+									<th scope="col" className="px-2 py-3 ">
 										Lokasi Daerah
 									</th>
-									<th scope="col" className="px-6 py-3 ">
+									<th scope="col" className="px-2 py-3 ">
 										Berat Sampah
 									</th>
-									<th scope="col" className="px-6 py-3 ">
+									<th scope="col" className="px-2 py-3 ">
 										Total Rupiah
 									</th>
-									<th scope="col" className="px-6 py-3 ">
+									<th scope="col" className="px-2 py-3 ">
 										Foto Sampah
 									</th>
-									<th scope="col" className="px-6 py-3 ">
+									<th scope="col" className="px-2 py-3 ">
 										Status
 									</th>
 								</tr>
@@ -295,12 +292,12 @@ export default function TrashToCash() {
 								{data.length !== 0 ? (
 									data.map((e, i) => (
 										<tr key={i} className="bg-white font-semibold border-b">
-											<td className="py-3 px-7 text-red-500">{e[0]}</td>
-											<td className="py-3 px-12">{e[2]}</td>
-											<td className="py-3 px-12">{e[3]}</td>
-											<td className="py-3 px-9">Rp. 5,000</td>
+											<td className="py-3 px-2 text-red-500">{e[0]}</td>
+											<td className="py-3 px-2">{e[2]}</td>
+											<td className="py-3 px-2">{e[3]}</td>
+											<td className="py-3 px-2">Rp. 5,000</td>
 											<td className="py-3">{e[1]}</td>
-											<td className="py-3 px-6 text-green-500">Sukses</td>
+											<td className="py-3 px-2 text-green-500">Sukses</td>
 										</tr>
 									))
 								) : (
