@@ -1,6 +1,10 @@
 import { useState } from "react";
 import PopAlert from "../common/formInput/PopAlert";
 import Input from "../common/formInput/Input";
+import Dana from '../../images/dashboard/dana.png'
+import Ovo from '../../images/dashboard/ovo.png'
+import Linkaja from '../../images/dashboard/linkaja.png'
+import Gopay from '../../images/dashboard/gopay.png'
 
 const Balance = ({ balance, ...rest }) => {
 	const [open, setOpen] = useState(false);
@@ -37,8 +41,13 @@ const Balance = ({ balance, ...rest }) => {
 				</div>
 			</div>
 			{open && (
-				<PopAlert title={"Trade"} state={open} onClick={handleWithdraw} open={"WITHDRAW"}>
-					<Input htmlFor={"nominal"} label={"Masukkan Nominal"} />
+				<PopAlert title={"WITHDRAW"} state={open} onClick={handleWithdraw} open={"Confirm"}>
+					<Input htmlFor={"nominal"} label={"Nominal Penarikan"} />
+					<div className="grid grid-cols-3 items-center justify-items-center gap-8">
+						<img className="w-20 cursor-pointer hover:scale-110 hover:drop-shadow-xl shadow-black" src={Dana} alt="" />
+						<img className="w-12 cursor-pointer hover:scale-110 hover:drop-shadow-xl shadow-black" src={Ovo} alt="" />
+						<img className="w-24 cursor-pointer hover:scale-110 hover:drop-shadow-xl shadow-black" src={Gopay} alt="" />
+					</div>
 				</PopAlert>
 			)}
 		</div>

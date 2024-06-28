@@ -26,9 +26,9 @@ export default function ChangeProfileAlert({ state, setState }) {
 		localStorage.setItem("profile", JSON.stringify(newData));
 		setData(newData);
 
-		// setTimeout(() => {
-		// 	window.location.reload();
-		// }, 100);
+		setTimeout(() => {
+			window.location.reload();
+		}, 100);
 	}
 	return (
 		<PopAlert title={"Change Profile"} state={state} onClick={handleChange} open={"SAVE"}>

@@ -8,7 +8,7 @@ function DashboardCard09({ money = 0 }) {
 			{
 				// INCOME
 				label: "Stack 1",
-				data: [5000],
+				data: [30000,5000,10000,10000,5000,25000],
 				backgroundColor: tailwindConfig().theme.colors.indigo[500],
 				hoverBackgroundColor: tailwindConfig().theme.colors.indigo[600],
 				barPercentage: 0.66,
@@ -30,7 +30,7 @@ function DashboardCard09({ money = 0 }) {
 	return (
 		<div className="flex flex-col rounded-xl lg:col-span-2 bg-white dark:bg-slate-800 shadow-xl border border-slate-200 dark:border-slate-700">
 			<header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700 flex items-center">
-				<h2 className="font-semibold text-slate-800 dark:text-slate-100">Week 1</h2>
+				<h2 className="font-semibold text-slate-800 dark:text-slate-100">Grafik Pendapatan</h2>
 			</header>
 
 			<div className="px-5 py-3">

@@ -1,4 +1,6 @@
-export default function PopAlert({ title, state, setState, open, children ,...rest}) {
+import { useState } from "react";
+
+export default function PopAlert({ title, state, setState, open, children, ...rest }) {
 	return (
 		<div
 			className={`fixed top-0 left-0 transition-all duration-500 ease-in-out ${
@@ -15,7 +17,7 @@ export default function PopAlert({ title, state, setState, open, children ,...re
 				</div>
 
 				<div
-					className="rounded-b-[2rem] cursor-pointer hover:bg-green-900 bg-green-700 py-2 flex justify-center items-center text-white font-bold"
+					className={`rounded-b-[2rem] cursor-pointer hover:bg-green-900 bg-green-700 py-2 flex justify-center items-center text-white font-bold`}
 					{...rest}
 				>
 					<span>{open}</span>

@@ -62,7 +62,7 @@ export default function Dashboard() {
 			>
 				<div className=" mx-10 bg-white grid shadow-2xl rounded-[2rem] gap-8 w-3/4 sm:w-1/2 lg:w-1/3 min-h-1/2">
 					<div className="text-white bg-[#836FFF] rounded-t-[2rem] font-bold text-xl flex justify-center items-center py-3">
-						<h1>Notification</h1>
+						<h1>Help & Support</h1>
 					</div>
 
 					<div className="flex flex-col gap-3 text-xs font-bold mx-8 mb-20 justify-center items-center border-b border-black">
