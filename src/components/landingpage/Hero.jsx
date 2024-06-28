@@ -11,11 +11,11 @@ export default function Hero() {
 			<div className={`${container.box1} mt-10 md:mt-20 `}>
 				<div className="font-semibold text-4xl md:text-5xl text-slate-800 grid gap-2">
 					<h1>
-						Memberdayakan Perjalanan Tanpa <span className="text-[#6B8E23]">Sampah</span>
+						Memberdayakan Perjalanan Tanpa <span className="text-[#85b328]">Sampah</span>
 					</h1>
 
 					<h1>
-						Secara <span className="text-[#6B8E23]">Online!</span>
+						Secara <span className="text-[#85b328]">Online!</span>
 					</h1>
 				</div>
 

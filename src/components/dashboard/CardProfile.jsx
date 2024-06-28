@@ -48,7 +48,7 @@ export default function CardProfile({ onClick }) {
 			>
 				Change Profile
 			</button>
-			{click && <ChangeProfileAlert state={click} setState={setClick}/>}
+			{click && <ChangeProfileAlert state={click} setState={setClick} />}
 		</div>
 	);
 }
