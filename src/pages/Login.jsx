@@ -17,7 +17,7 @@ export default function Login() {
 		const message = isValid ? "Login Berhasil" : "Semua Field Harus Diisi";
 		const color = isValid ? "text-green-500" : "text-red-500 animate-pulse";
 		return (
-			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl fixed top-10 left-1/2 transform -translate-x-1/2 transition-transform duration-300 ease-out">
+			<div className="rounded-2xl px-4 py-2 bg-white shadow-xl fixed top-10 z-[9999] left-1/2 transform -translate-x-1/2 transition-transform duration-300 ease-out">
 				<h1 className={`font-bold text-xl ${color}`}>{message}</h1>
 			</div>
 		);

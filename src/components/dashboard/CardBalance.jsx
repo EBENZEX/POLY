@@ -1,18 +1,28 @@
-const Balance = ({ balance, state, ...rest }) => {
+import { useState } from "react";
+import PopAlert from "../common/formInput/PopAlert";
+import Input from "../common/formInput/Input";
+
+const Balance = ({ balance, ...rest }) => {
+	const [open, setOpen] = useState(false);
+
+	function handleWithdraw() {
+		setOpen((prev) => !prev);
+	}
+
 	return (
 		<div className="rounded-xl bg-white md:col-span-7 lg:col-span-1 p-4 flex flex-col gap-2 shadow-xl">
 			<div className="grid gap-2">
 				<div className="flex justify-between items-center px-1">
 					<h1 className="font-bold">Balance</h1>
 					<button
-						{...rest}
+						onClick={() => setOpen((prev) => !prev)}
 						className="rounded-full px-4 py-1 bg-gray-300 hover:bg-gray-400 font-semibold focus:outline-none"
 					>
 						Withdraw
 					</button>
 				</div>
 
-				<div className="flex flex-col flex-1 gap-8 bg-red-500 rounded-lg p-5 md:p-6 justify-between text-white">
+				<div className="flex flex-col gap-8 bg-red-500 rounded-lg p-5 md:p-6 justify-between text-white">
 					<div className="grid gap-2">
 						<span className="text-sm font-light font-mono">Current Balance</span>
 						<h1 className=" font-bold text-xl md:translate-y-8">
@@ -26,6 +36,11 @@ const Balance = ({ balance, state, ...rest }) => {
 					</div>
 				</div>
 			</div>
+			{open && (
+				<PopAlert title={"Trade"} state={open} onClick={handleWithdraw} open={"WITHDRAW"}>
+					<Input htmlFor={"nominal"} label={"Masukkan Nominal"} />
+				</PopAlert>
+			)}
 		</div>
 	);
 };

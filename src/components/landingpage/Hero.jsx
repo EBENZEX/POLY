@@ -6,7 +6,7 @@ export default function Hero() {
 	return (
 		<div
 			style={{ backgroundImage: `url(${Image})` }}
-			className={`${container.fluid} bg-cover bg-no-repeat md:bg-left h-[650px] mt-1`}
+			className={`${container.fluid} bg-cover bg-no-repeat md:bg-left h-[650px]`}
 		>
 			<div className={`${container.box1} mt-10 md:mt-20 `}>
 				<div className="font-semibold text-4xl md:text-5xl text-slate-800 grid gap-2">

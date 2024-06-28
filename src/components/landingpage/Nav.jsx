@@ -11,7 +11,7 @@ export default function Nav() {
 		setIsClick(!isClick);
 	}
 	return (
-		<nav className="grid bg-[#F0F3FF] shadow-lg z-10 px-8 py-4 rounded-bl-[1.5rem] rounded-br-[1.5rem]">
+		<nav className="grid bg-[#F0F3FF] w-screen sticky top-0 shadow-lg z-10 px-8 py-4 -mt-2 rounded-bl-[1.5rem] rounded-br-[1.5rem]">
 			<div className="w-full flex justify-between items-center">
 				<NavLink to={"/"}>
 					<img className="w-16 hover:scale-125" src={Logo} alt="" />

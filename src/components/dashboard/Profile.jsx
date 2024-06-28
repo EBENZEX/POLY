@@ -6,11 +6,10 @@ import CardIncome from "./CardIncome";
 import CardBalance from "./CardBalance";
 import CardActivity from "./CardActivity";
 
-export default function DashboardProfile() {
+export default function DashboardProfile({ changeProfile, withdraw }) {
 	const [data, setData] = useState([]);
 	const [balance, setBalance] = useState(0);
 	const [outcome, setOutcome] = useState(0);
-	const [tarikTunai, setTarikTunai] = useState(false);
 
 	useEffect(() => {
 		const storedData = localStorage.getItem("data");
@@ -21,6 +20,7 @@ export default function DashboardProfile() {
 			setBalance(balance);
 		}
 	}, []);
+
 	return (
 		<main className="w-full h-full grid">
 			{/* BG COVER */}
@@ -30,9 +30,9 @@ export default function DashboardProfile() {
 
 			{/* BOX */}
 			<div className="hidden lg:grid grid-cols-12 gap-3 pr-2">
-				<CardProfile />
+				<CardProfile onClick={changeProfile} />
 				<div className="col-span-9 grid grid-cols-3 gap-4 lg:mt-3">
-					<CardBalance balance={balance} state={tarikTunai} onClick={() => setTarikTunai((prev) => !prev)} />
+					<CardBalance balance={balance} />
 					<CardIncome bg="#C4FFAF" header="Income" type="income" text={balance} />
 					<CardIncome bg="#FF7878" header="Outcome" type="outcome" text={outcome} />
 					<CardChart money={balance} />
@@ -43,8 +43,8 @@ export default function DashboardProfile() {
 			{/* box 2 */}
 			<div className="lg:hidden flex flex-col flex-1 gap-6  pl-4 pr-[5.75rem] w-screen">
 				<div className="flex flex-col md:grid md:grid-cols-12 mt-10 lg:mt-0 gap-4">
-					<CardProfile />
-					<CardBalance balance={balance} state={tarikTunai} onClick={() => setTarikTunai((prev) => !prev)} />
+					<CardProfile onClick={changeProfile} />
+					<CardBalance balance={balance} />
 					<CardIncome bg="#C4FFAF" header="Income" type="income" text={balance} />
 					<CardIncome bg="#FF7878" header="Outcome" type="outcome" text={outcome} />
 				</div>
