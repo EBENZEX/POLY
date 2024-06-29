@@ -20,37 +20,37 @@ export default function Nav() {
 				{/* LG KEATAS */}
 				<div className={`${nav.box} gap-8`}>
 					<NavLink to={"/"} className={nav.link}>
-						Home
+						Beranda
 					</NavLink>
 
 					<NavLink to={"/#skenario"} className={nav.link}>
-						Trade
+						Penukaran
 					</NavLink>
 
 					<NavLink to={"/#distribusi"} className={nav.link}>
-						Distribution
+						Distribusi
 					</NavLink>
 
 					<NavLink to={"/#about"} className={nav.link}>
-						About Us
+						Tentang Kami
 					</NavLink>
 
 					<NavLink to={"/#bussiness"} className={nav.link}>
-						Business
+						Bisnis
 					</NavLink>
 
 					<NavLink to={"/#contact"} className={nav.link}>
-						Contact
+						Kontak
 					</NavLink>
 				</div>
 
 				<div className={`${nav.box} gap-4`}>
 					<NavLink to={"/register"} className={nav.link}>
-						Register
+						Daftar
 					</NavLink>
 					<span>|</span>
 					<NavLink to={"/login"} className={nav.link}>
-						Login
+						Masuk
 					</NavLink>
 				</div>
 
@@ -64,35 +64,35 @@ export default function Nav() {
 			{isClick && (
 				<div className="lg:hidden bg-[#F0F3FF] grid font-bold text-xl -mx-8 pt-4 text-[#836FFF]">
 					<NavLink to={"/"} className={"hover:bg-slate-200 pl-8 py-3"}>
-						Home
+						Beranda
 					</NavLink>
 
 					<NavLink to={"/#skenario"} className={nav.linkSmall}>
-						Trade
+						Penukaran
 					</NavLink>
 
 					<NavLink to={"/#distribusi"} className={nav.linkSmall}>
-						Distribution
+						Distribusi
 					</NavLink>
 
 					<NavLink to={"/#about"} className={nav.linkSmall}>
-						About Us
+						Tentang Kami
 					</NavLink>
 
 					<NavLink to={"/#bussiness"} className={nav.linkSmall}>
-						Bussiness
+						Bisnis
 					</NavLink>
 
 					<NavLink to={"/#contact"} className={nav.linkSmall}>
-						Contact
+						Kontak
 					</NavLink>
 
 					<NavLink onClick={handleIsClick} to={"/login"} className={nav.linkSmall}>
-						Login
+						Masuk
 					</NavLink>
 
 					<NavLink onClick={handleIsClick} to={"/register"} className={nav.linkSmall}>
-						Register
+						Daftar
 					</NavLink>
 				</div>
 			)}
