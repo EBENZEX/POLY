@@ -27,7 +27,7 @@ export default function Hero() {
 					to={"/register"}
 					className="w-full lg:w-1/6 px-10 md:px-2 py-2 text-xl text-center font-bold bg-[#836FFF] hover:bg-[#6c5bdb] text-white border-2 rounded-[1.3rem] border-none"
 				>
-					Mulai Sekarang !
+					Mulai Sekarang
 				</Link>
 			</div>
 		</div>
