@@ -28,7 +28,7 @@ export default function CardProfile({ onClick }) {
 					onClick={() => setClick((prev) => !prev)}
 					className="lg:hidden rounded-full bg-gradient-to-r from-[#836FFF] to-[#4F4399] text-white font-medium h-min text-[.6rem] px-2 md:px-5 py-2"
 				>
-					Change Profile
+					Ubah Profile
 				</button>
 			</div>
 
@@ -46,7 +46,7 @@ export default function CardProfile({ onClick }) {
 				onClick={() => setClick((prev) => !prev)}
 				className="hidden lg:block rounded-full bg-gradient-to-r from-[#836FFF] to-[#4F4399] text-white font-bold px-6 py-2"
 			>
-				Change Profile
+				Ubah Profil
 			</button>
 			{click && <ChangeProfileAlert state={click} setState={setClick} />}
 		</div>

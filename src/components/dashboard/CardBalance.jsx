@@ -22,7 +22,7 @@ const Balance = ({ balance, ...rest }) => {
 						onClick={() => setOpen((prev) => !prev)}
 						className="rounded-full px-4 py-1 bg-gray-300 hover:bg-gray-400 font-semibold focus:outline-none"
 					>
-						Withdraw
+						Tarik Tunai
 					</button>
 				</div>
 
@@ -41,7 +41,7 @@ const Balance = ({ balance, ...rest }) => {
 				</div>
 			</div>
 			{open && (
-				<PopAlert title={"WITHDRAW"} state={open} onClick={handleWithdraw} open={"Confirm"}>
+				<PopAlert title={"Tarik Tuni"} state={open} onClick={handleWithdraw} open={"Confirm"}>
 					<Input htmlFor={"nominal"} label={"Nominal Penarikan"} />
 					<div className="grid grid-cols-3 items-center justify-items-center gap-8">
 						<img className="w-20 cursor-pointer hover:scale-110 hover:drop-shadow-xl shadow-black" src={Dana} alt="" />

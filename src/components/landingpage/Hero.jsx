@@ -20,14 +20,14 @@ export default function Hero() {
 				</div>
 
 				<div className="grid gap-1 font-medium text-slate-600 text-xl">
-					<p>Unlimited Free Usage</p>
+					<p>Pemakaian Tiada Batas</p>
 				</div>
 
 				<Link
 					to={"/register"}
 					className="w-full lg:w-1/6 px-10 md:px-2 py-2 text-xl text-center font-bold bg-[#836FFF] hover:bg-[#6c5bdb] text-white border-2 rounded-[1.3rem] border-none"
 				>
-					Get Started
+					Mulai Sekarang !
 				</Link>
 			</div>
 		</div>

@@ -33,8 +33,8 @@ export default function DashboardProfile({ changeProfile, withdraw }) {
 				<CardProfile onClick={changeProfile} />
 				<div className="col-span-9 grid grid-cols-3 gap-4 lg:mt-3">
 					<CardBalance balance={balance} />
-					<CardIncome bg="#C4FFAF" header="Income" type="income" text={balance} />
-					<CardIncome bg="#FF7878" header="Outcome" type="outcome" text={outcome} />
+					<CardIncome bg="#C4FFAF" header="Pemasukan" type="income" text={balance} />
+					<CardIncome bg="#FF7878" header="Pengeluaran" type="outcome" text={outcome} />
 					<CardChart money={balance} />
 					<CardActivity />
 				</div>
@@ -45,8 +45,8 @@ export default function DashboardProfile({ changeProfile, withdraw }) {
 				<div className="flex flex-col md:grid md:grid-cols-12 mt-10 lg:mt-0 gap-4">
 					<CardProfile onClick={changeProfile} />
 					<CardBalance balance={balance} />
-					<CardIncome bg="#C4FFAF" header="Income" type="income" text={balance} />
-					<CardIncome bg="#FF7878" header="Outcome" type="outcome" text={outcome} />
+					<CardIncome bg="#C4FFAF" header="Pemasukan" type="income" text={balance} />
+					<CardIncome bg="#FF7878" header="Pengeluaran" type="outcome" text={outcome} />
 				</div>
 				<CardChart money={balance} />
 				<CardActivity />

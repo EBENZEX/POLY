@@ -45,7 +45,7 @@ export default function Register() {
 
 				{/* SIGN UP */}
 				<div className={`${form.box} order-1 lg:order-2 rounded-xl md:rounded-r-xl md:rounded-bl-none px-6 md:px-10`}>
-					<h1 className="text-center text-gray-700 font-bold text-2xl md:text-4xl mb-5">Sign Up</h1>
+					<h1 className="text-center text-gray-700 font-bold text-2xl md:text-4xl mb-5">REGISTER</h1>
 
 					<div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 mt-3 md:gap-8 text-gray-500">
 						{/* USERNAME */}
@@ -149,7 +149,7 @@ export default function Register() {
 
 					{/* Submit BTN */}
 					<Link to={"/dashboard-home"} className={`${form.btn} text-center text-gray-700`}>
-						<button>Register</button>
+						<button>Daftar</button>
 					</Link>
 
 					{/* ALT WAY LOGIN (DUMMY FITUR) */}

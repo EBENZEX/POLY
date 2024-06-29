@@ -1,5 +1,5 @@
 import Logo from "../images/dashboard/logo.png";
-import { Home, X, HandCoins, Bell, CircleHelp, User } from "lucide-react";
+import { Home, X, HandCoins, Bell, CircleHelp, User, Wallet } from "lucide-react";
 import PageTitle from "../components/PageTitle";
 import Sidebar, { SidebarItem } from "../components/dashboard/Sidebar";
 import Header from "../components/dashboard/Header";
@@ -56,7 +56,7 @@ export default function Dashboard() {
 
 			{/* Support */}
 			<div
-				className={`absolute transition-all duration-500 ease-in-out ${
+				className={`absolute transition-all dbusuration-500 ease-in-out ${
 					support ? "opacity-100 z-50 " : "opacity-0 -z-50"
 				} backdrop-blur-sm w-full h-full flex justify-center items-center`}
 			>
@@ -84,15 +84,15 @@ export default function Dashboard() {
 			{/* SIDEBAR */}
 			<div className="flex">
 				<Sidebar>
-					<SidebarItem path="/dashboard-home" icon={<Home color="#fff" size={20} />} text="Home" />
-					<SidebarItem path="/dashboard-profile" icon={<User color="#fff" size={20} />} text="Profile" />
-					<SidebarItem path="/dashboard-cash" icon={<HandCoins color="#fff" size={20} />} text="Trade" />
+					<SidebarItem path="/dashboard-home" icon={<Home color="#fff" size={20} />} text="Beranda" />
+					<SidebarItem path="/dashboard-profile" icon={<Wallet color="#fff" size={20} />} text="Dompet" />
+					<SidebarItem path="/dashboard-cash" icon={<HandCoins color="#fff" size={20} />} text="Penukaran" />
 					<hr className="my-3" />
 					<div onClick={() => setNotif((cur) => !cur)}>
-						<SidebarItem icon={<Bell color="#fff" size={20} />} text="Notification" />
+						<SidebarItem icon={<Bell color="#fff" size={20} />} text="Notifikasi" />
 					</div>
 					<div onClick={() => setSupport((cur) => !cur)}>
-						<SidebarItem icon={<CircleHelp color="#fff" size={20} />} text="Help" />
+						<SidebarItem icon={<CircleHelp color="#fff" size={20} />} text="Bantuan" />
 					</div>
 				</Sidebar>
 			</div>

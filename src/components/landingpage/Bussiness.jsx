@@ -7,7 +7,7 @@ export default function Bussiness() {
 	return (
 		<div id="bussiness" className={`${container.fluid} bg-[#E2E8FF]`}>
 			<div className={`${container.box1} gap-14`}>
-				<h1 className="font-bold text-4xl md:text-5xl text-center">Bussiness Line</h1>
+				<h1 className="font-bold text-4xl md:text-5xl text-center">Alur Bisnis</h1>
 
 				<div className={`${bussiness.cardContainer}`}>
 					<div className={bussiness.card}>

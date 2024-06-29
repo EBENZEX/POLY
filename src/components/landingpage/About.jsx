@@ -4,7 +4,7 @@ export default function About() {
 	return (
 		<div id='about' className={`${container.fluid} bg-[#F0F3FF]`}>
 			<div className={`${container.box2} gap-14 pt-8 pb-20`}>
-				<h1 className={font.heading}>About us</h1>
+				<h1 className={font.heading}>Tentang Kami</h1>
 				<p className="text-justify text-lg">
 					Kami hadir untuk membantu Anda mengubah sampah menjadi sumber penghasilan melalui platform inovatif yang
 					memudahkan pengelolaan limbah rumah tangga dan industri, menjadikannya bernilai ekonomi tinggi. Dengan

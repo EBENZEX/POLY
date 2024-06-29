@@ -66,7 +66,7 @@ export default function Login() {
 				<div
 					className={`${form.box} md:col-span-6 lg:col-span-1 h-[80vh] rounded-xl md:rounded-br-none md:rounded-l-xl lg:h-fit order-2 md:order-1`}
 				>
-					<h1 className="text-center font-bold text-2xl md:text-4xl mb-8">Sign In</h1>
+					<h1 className="text-center font-bold text-2xl md:text-4xl mb-8">LOGIN</h1>
 
 					<label htmlFor="username" className="grid px-4 md:px-12 mt-4">
 						<input
@@ -81,7 +81,9 @@ export default function Login() {
 						/>
 						<h2
 							className={`font-medium pl-2 text-sm md:text-lg ${
-								!userField ? "-translate-y-6 md:-translate-y-9 cursor-pointer text-slate-600" : "-translate-y-12 md:-translate-y-20"
+								!userField
+									? "-translate-y-6 md:-translate-y-9 cursor-pointer text-slate-600"
+									: "-translate-y-12 md:-translate-y-20"
 							}`}
 						>
 							Username
@@ -101,7 +103,9 @@ export default function Login() {
 						/>
 						<h2
 							className={`font-medium pl-2 text-sm md:text-lg ${
-								!passwordField ? "-translate-y-6 md:-translate-y-9 cursor-pointer text-slate-600" : "-translate-y-12 md:-translate-y-20"
+								!passwordField
+									? "-translate-y-6 md:-translate-y-9 cursor-pointer text-slate-600"
+									: "-translate-y-12 md:-translate-y-20"
 							}`}
 						>
 							Password
@@ -109,7 +113,7 @@ export default function Login() {
 					</label>
 
 					<button className={`${form.btn} mx-4 md:mx-12 text-center`} onClick={handleBtn}>
-						Login
+						Masuk
 					</button>
 
 					<span className="text-center text-xs md:text-lg">Or Try Login In Another Way</span>

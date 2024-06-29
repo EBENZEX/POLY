@@ -72,7 +72,7 @@ function DropdownProfile({ align }) {
 								to="/"
 								onClick={() => setDropdownOpen(!dropdownOpen)}
 							>
-								Sign Out
+								Keluar
 							</Link>
 						</li>
 					</ul>

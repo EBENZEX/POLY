@@ -4,7 +4,7 @@ export default function Distribusi() {
 	return (
 		<div id="distribusi" className={`${container.fluid} bg-[#E2E8FF]`}>
 			<div className={`${container.box2} gap-14 pt-8 pb-20`}>
-				<h1 className={font.heading}>Distribution & Cost</h1>
+				<h1 className={font.heading}>Distribusi & Biaya</h1>
 				<p className="text-justify text-lg">
 					Pihak POLY Berkerja sama dengan pemerintah sebagai distribusi dalam penukaran sampah dan pengambilan sampah ,
 					Anda wajib mebuang sampah pada Tempat Penampungan Sementara (TPS) di daerah anda TPS merupakan tempat sebelum
